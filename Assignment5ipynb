@@ -1,0 +1,6765 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "433b5158-c861-4d3f-876b-7ec898ef5d40",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#TOPIC: String Based Assignment \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "2856a3a2-716d-4db1-b1f4-20c279d8f5d4",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#1. Write a program to reverse a string. \n",
+    "#Ans:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "61d7818d-f084-491f-97bd-de4debd61654",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'ahdnagihsin'"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s=\"nishigandha\"\n",
+    "s[::-1]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "33325a13-45b4-43ed-a860-3589c92a9d53",
+   "metadata": {},
+   "source": [
+    "2. Check if a string is a palindrome. \n",
+    "Ans:\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "5a2ba60f-8726-419e-b24d-4634b55f8066",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The string is a palindrome.\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_str = \"nityaytin\"\n",
+    "rev_str = reversed(my_str)\n",
+    "\n",
+    "if list(my_str) == list(rev_str):\n",
+    "     print(\"The string is a palindrome.\")\n",
+    "else:\n",
+    "   print(\"The string is not a palindrome.\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "058acd8a-d942-4913-afcd-c7a29ae39c50",
+   "metadata": {},
+   "source": [
+    "3. Convert a string to uppercase. \n",
+    "Ans:\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "f7866345-37d3-406b-9249-0937028d14cf",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'NISHIGANDHA'"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "n=\"nishigandha\"\n",
+    "n.upper()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7aa4f7cd-8203-47cc-a49d-8774549967dd",
+   "metadata": {},
+   "source": [
+    "4. Convert a string to lowercase. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "b844d02a-af68-4699-af0c-9f1ba7cbd1db",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'nishigandha'"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "N=\"NISHIGANDHA\"\n",
+    "N.lower()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "91f05337-c7f1-4468-a85a-57da0c496b88",
+   "metadata": {},
+   "source": [
+    "5. Count the number of vowels in a string. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "52204992-f1ca-4774-875a-e9a108372bed",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "4\n"
+     ]
+    }
+   ],
+   "source": [
+    "n=\"nishigandha\"\n",
+    "vowels=\"aeiouAEIOU\"\n",
+    "\n",
+    "count=sum(n.count(vowel) for vowel in vowels)\n",
+    "print(count)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a1425870-fdb2-43e5-a43c-f0818a3f6eb6",
+   "metadata": {},
+   "source": [
+    "6. Count the number of consonants in a string\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "331d20be-d35f-4fe8-b446-de23e66da305",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "7\n"
+     ]
+    }
+   ],
+   "source": [
+    "n=\"nishigandha\"\n",
+    "consonents=\"bcdfghjklmnpqrstvwxyz\"\n",
+    "\n",
+    "count = sum(n.count(consonent) for consonent in consonents)\n",
+    "print(count)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "81d6597f-6dc1-447a-84cd-5e2c571904df",
+   "metadata": {},
+   "source": [
+    "7. Remove all whitespaces from a string. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "a3c0924b-ae36-42e2-9207-9d02e3f4343a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'nishigandha'"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "n=\"ni shi ga ndh a\"\n",
+    "n.replace(\" \", \"\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b4fe2508-11b6-4c2b-a785-32bdc2e85431",
+   "metadata": {},
+   "source": [
+    "8. Find the length of a string without using the `len()` function."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "f4ac49a4-9a8d-4dc7-ab18-a8881deaad1c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "11\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = 'nishigandha'\n",
+    "\n",
+    "count = 0\n",
+    "\n",
+    "for i in n:\n",
+    " \n",
+    "    count+=1\n",
+    "print(count)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "188d9d48-7ca4-4d54-8944-0527e14898e7",
+   "metadata": {},
+   "source": [
+    "9. Check if a string contains a specific word. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "edbb5f1f-9ca4-4874-aa13-72bc4858d905",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "its contain lazy word\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = \" i am very lazy girl\"\n",
+    "\n",
+    "if \"lazy\" in n:\n",
+    "    print(\"its contain lazy word\")\n",
+    "else:\n",
+    "    print(\"its not contain lazy word\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0ac10699-b27c-4326-99c2-75c2eccac15c",
+   "metadata": {},
+   "source": [
+    "10. Replace a word in a string with another word"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "23bd906a-4fbe-42e6-8f72-30dbd2c0a3e3",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "' i am very happy girl'"
+      ]
+     },
+     "execution_count": 17,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "n = \" i am very lazy girl\"\n",
+    "\n",
+    "n.replace(\"lazy\",\"happy\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "16c85288-5a91-4020-be37-b61c665a8a0f",
+   "metadata": {},
+   "source": [
+    " 11. Count the occurrences of a word in a string."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "c4b6a8d7-578e-4d1d-a7c2-119e4ab423c0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 18,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "n = \" i am very lazy girl\"\n",
+    "\n",
+    "n.count(\"lazy\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2930128f-61f6-44f0-89c1-4bf7e17942dd",
+   "metadata": {},
+   "source": [
+    " 12. Find the first occurrence of a word in a string."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "82865e72-d9ad-4f74-a229-3b0c61697297",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 19,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "n = \" i am very lazy girl and i am happy girl\"\n",
+    "\n",
+    "n.index(\"i\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "635f7ecc-4a98-45f9-bad9-abde0ca61466",
+   "metadata": {},
+   "source": [
+    "13. Find the last occurrence of a word in a string\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "31592e7a-ff2f-4d52-a445-516bc8a6f70e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The last index of i in the given string is 37\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = \" i am very lazy girl and i am happy girl\"\n",
+    "index = n.rindex('i')\n",
+    "print(\"The last index of i in the given string is\",index)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3743663f-d502-451b-8255-6dcdde98f0cc",
+   "metadata": {},
+   "source": [
+    "14. Split a string into a list of words. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "f3c24cea-031e-495d-953a-9e2b2b90c105",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['i', 'am', 'very', 'lazy', 'girl', 'and', 'i', 'am', 'happy', 'girl']"
+      ]
+     },
+     "execution_count": 21,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "n = \" i am very lazy girl and i am happy girl\"\n",
+    "n.split()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1230025a-7502-45a8-9ae2-0b865db41df6",
+   "metadata": {},
+   "source": [
+    "15. Join a list of words into a string. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "3377be4c-6c0f-4630-9397-1e02bb1578d4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "iamverylazygirlandiamhappygirl\n"
+     ]
+    }
+   ],
+   "source": [
+    "l = ['i', 'am', 'very', 'lazy', 'girl', 'and', 'i', 'am', 'happy', 'girl']\n",
+    "\n",
+    "print(\"\".join(l))\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bd2444f0-b7ff-4d90-af33-86aef8f2e818",
+   "metadata": {},
+   "source": [
+    "16. Convert a string where words are separated by spaces to one where words are separated by underscores. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "78de6509-a302-47c5-b718-ec4a984c661c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'_ _i_ _a_m_ _v_e_r_y_ _l_a_z_y_ _g_i_r_l_ _a_n_d_ _i_ _a_m_ _h_a_p_p_y_ _g_i_r_l_'"
+      ]
+     },
+     "execution_count": 23,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "n = \" i am very lazy girl and i am happy girl\"\n",
+    "n.replace(\"\",\"_\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "56ae8b72-2f34-4ec2-9c38-9b79a6eca078",
+   "metadata": {},
+   "source": [
+    "17. Check if a string starts with a specific word or phrase. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "e2170b46-02a9-4a34-b567-a436d984ecae",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "message = 'Python is fun'\n",
+    "\n",
+    "# check if the message starts with Python\n",
+    "print(message.startswith('Python'))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "63eb5fcb-c573-4a65-9837-c941274f7205",
+   "metadata": {},
+   "source": [
+    "18. Check if a string ends with a specific word or phrase.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "33f2eede-c325-42ba-9b48-3981a1515145",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = \"Hello, welcome to my world.\"\n",
+    "\n",
+    "x = n.endswith(\".\")\n",
+    "\n",
+    "print(x)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "50690768-8269-4327-84a9-045261661bdf",
+   "metadata": {},
+   "source": [
+    "19. Convert a string to title case (e.g., \"hello world\" to \"Hello World\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "4821dfe1-14a5-4288-bd47-c16e5ebe543c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'hELLO, WELCOME TO MY WORLD:'"
+      ]
+     },
+     "execution_count": 27,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "n = \"Hello, welcome to my world:\"\n",
+    "n.swapcase()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f5cbf55f-f4ff-4c58-89c8-d70480ee42cb",
+   "metadata": {},
+   "source": [
+    " 20. Find the longest word in a string. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "f00add48-2125-455d-a122-9911a8534535",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter sentence:  i am aditi\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Longest word is:  aditi\n",
+      "And its length is:  5\n"
+     ]
+    }
+   ],
+   "source": [
+    "sentence = input(\"Enter sentence: \")\n",
+    "\n",
+    "# Finding longest word\n",
+    "longest = max(sentence.split(), key=len)\n",
+    "\n",
+    "# Displaying longest word\n",
+    "print(\"Longest word is: \", longest)\n",
+    "print(\"And its length is: \", len(longest))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "30955ff4-08d2-4ecb-bd19-a375934c7007",
+   "metadata": {},
+   "source": [
+    "21. Find the shortest word in a string. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "a418d4f0-cbc2-4643-997e-fd7187d88817",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter sentence:  i am good girl\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "shortest word is:  i\n",
+      "And its length is:  1\n"
+     ]
+    }
+   ],
+   "source": [
+    "sentence = input(\"Enter sentence: \")\n",
+    "\n",
+    "# Finding shortest  word\n",
+    "shortest = min(sentence.split(), key=len)\n",
+    "\n",
+    "# Displaying shortest word\n",
+    "print(\"shortest word is: \", shortest)\n",
+    "print(\"And its length is: \", len(shortest))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "00317987-50a9-4820-bd09-308b0e84259e",
+   "metadata": {},
+   "source": [
+    "22. Reverse the order of words in a string\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "995c1a1e-59c1-43c5-ad37-6fd9a461c352",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "':dlrow ym ot emoclew ,olleH'"
+      ]
+     },
+     "execution_count": 30,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "n = \"Hello, welcome to my world:\"\n",
+    "n[::-1]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "785a2a13-52cc-4f04-a2db-512e75b483df",
+   "metadata": {},
+   "source": [
+    "23. Check if a string is alphanumeric.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "f5a6c1ff-0f08-4436-8385-ff8620fc75e9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = \"Hello, welcome to my world:\"\n",
+    "print(n.isalnum())"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bb992743-94ce-43cd-98ed-dee6be7da795",
+   "metadata": {},
+   "source": [
+    "24. Extract all digits from a string.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "2ab4388a-3c32-4cfb-b3b9-558802f54d22",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3000\n"
+     ]
+    }
+   ],
+   "source": [
+    "s = \"I love you 3000\"\n",
+    "# result string \n",
+    "s_nums = \"\"\n",
+    "# iterate over characters in s\n",
+    "for ch in s:\n",
+    "    if ch.isdigit():\n",
+    "        s_nums += ch\n",
+    "# display the result string\n",
+    "print(s_nums)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "dadf9609-b003-48ad-9ae0-d652a5ddf943",
+   "metadata": {},
+   "source": [
+    "25. Extract all alphabets from a string. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "id": "3958b303-e457-4357-b362-c676e6387b69",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      " Iloveyou\n"
+     ]
+    }
+   ],
+   "source": [
+    "s = \"I love you 3000\"\n",
+    "# result string\n",
+    "s_alphabets = \" \"\n",
+    "for ch in s:\n",
+    "    if ch.isalpha():\n",
+    "        s_alphabets += ch\n",
+    "print(s_alphabets)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ab42e9a6-6010-4df6-8728-dad227cc9c21",
+   "metadata": {},
+   "source": [
+    "27. Count the number of lowercase letters in a string\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "id": "e7785311-f581-47f9-87c3-dcfcc11349ae",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The number of lowercase characters is:\n",
+      "6\n"
+     ]
+    }
+   ],
+   "source": [
+    "n=\"NISHIgandha\"\n",
+    "count=0\n",
+    "for i in n:\n",
+    "    if(i.islower()):\n",
+    "        count=count+1\n",
+    "print(\"The number of lowercase characters is:\")\n",
+    "print(count)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9785bf53-ec4f-4167-9b5b-284faedf669c",
+   "metadata": {},
+   "source": [
+    "28.swap the case of each charachter in string.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "id": "0558bec6-f275-41c4-a07d-5a1da76a6f5e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'nishiGANNDHA'"
+      ]
+     },
+     "execution_count": 36,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "n=\"NISHIganndha\"\n",
+    "n.swapcase()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bf6517b3-9ad0-4109-a185-33e56b284b61",
+   "metadata": {},
+   "source": [
+    "29. Remove a specific word from a string. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "id": "c7b3d90a-0e22-4c0f-9486-a25662626fd0",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "i am good  and i am very kind person\n"
+     ]
+    }
+   ],
+   "source": [
+    "a=\"i am good girl and i am very kind person\"\n",
+    "a1=a.replace(\"girl\", '')\n",
+    "print(a1)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "60e43572-dec7-421e-a414-8071775d110b",
+   "metadata": {},
+   "source": [
+    " 30. Check if a string is a valid email address.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "id": "cbad714d-93db-41a7-b2af-6734eac5e671",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Invalid email address\n"
+     ]
+    }
+   ],
+   "source": [
+    "import re  \n",
+    "  \n",
+    "def validate_email(email):  \n",
+    "    if re.match(r\"[@8][@8][@8]+\", email):  \n",
+    "        return True  \n",
+    "    return False  \n",
+    "  \n",
+    "email = \"aditisavant6@gmail.com\"  \n",
+    "if validate_email(email):  \n",
+    "    print(\"Valid email address\")  \n",
+    "else:  \n",
+    "    print(\"Invalid email address\")  \n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "57674dbe-25f3-469a-a3e2-9b6872abfa0b",
+   "metadata": {},
+   "source": [
+    "31. Extract the username from an email address string\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "id": "516100ae-2ce3-498e-bc63-694f114dcf4e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The original string is : _aditisavant6@pwskill.com\n",
+      "The extracted user name : aditisavant6\n"
+     ]
+    }
+   ],
+   "source": [
+    "# initializing strings\n",
+    "s1 = '_aditisavant6@pwskill.com'\n",
+    " \n",
+    "# printing original string\n",
+    "print(\"The original string is : \" + str(s1))\n",
+    " \n",
+    "# slicing user name using slicing\n",
+    "res = s1[s1.index('_') +1 :-12 ]\n",
+    " \n",
+    "# printing result\n",
+    "print(\"The extracted user name : \" + str(res))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e4bde33b-50db-49e8-8f93-79215e13dc3f",
+   "metadata": {},
+   "source": [
+    "32. Extract the domain name from an email address string.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "id": "7c57d3be-8347-4c84-a054-0075e7db036b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The original string is : _aditisavant6@pwskill.com\n",
+      "The extracted domain name : pwskill.com\n"
+     ]
+    }
+   ],
+   "source": [
+    "# initializing strings\n",
+    "s1 = '_aditisavant6@pwskill.com'\n",
+    " \n",
+    "# printing original string\n",
+    "print(\"The original string is : \" + str(s1))\n",
+    " \n",
+    "# slicing domain name using slicing\n",
+    "res = s1[s1.index('@') +1 : ]\n",
+    " \n",
+    "# printing result\n",
+    "print(\"The extracted domain name : \" + str(res))\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9ee69547-1795-442a-b5ed-554fd48583de",
+   "metadata": {},
+   "source": [
+    " 33. Replace multiple spaces in a string with a single space."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "id": "7cce87cd-d473-46ea-967e-f6d4fbe0f759",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "'i am good girl and i am very kind person'\n"
+     ]
+    }
+   ],
+   "source": [
+    "a=\"i   am   good   girl   and     i   am   very   kind   person\"\n",
+    "result=re.sub(' +', ' ',a)\n",
+    "print(repr(result))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fb168832-8152-46c1-988b-89aca5c366b2",
+   "metadata": {},
+   "source": [
+    "34. Check if a string is a valid URL\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "abd42634-bd69-4a1c-80ae-8cca111b1360",
+   "metadata": {},
+   "source": [
+    "35. Extract the protocol (http or https) from a URL string\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "id": "415384f8-9536-4898-9d11-96e43319f396",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['uibakery.io']"
+      ]
+     },
+     "execution_count": 42,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Extract URL without prrotocol from a string\n",
+    "url_extract_pattern = \"[-a-zA-Z0-9@:%._\\\\+~#=]{1,256}\\\\.[a-zA-Z0-9()]{1,6}\\\\b(?:[-a-zA-Z0-9()@:%_\\\\+.~#?&\\\\/=]*)\"\n",
+    "re.findall(url_extract_pattern, 'You can view more details at uibakery.io or just ping via email.') # returns ['uibakery.io']\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "49bb5745-641e-4517-af8b-191842b9f21b",
+   "metadata": {},
+   "source": [
+    "37. Remove all punctuation from a string. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 43,
+   "id": "c3f34814-7874-455d-8e15-21d59427e7b9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "hi what is the weather like\n"
+     ]
+    }
+   ],
+   "source": [
+    "import string\n",
+    "\n",
+    "a_string = '!hi. wh?at is the weat[h]er lik?e.'\n",
+    "new_string = a_string.translate(str.maketrans('', '', string.punctuation))\n",
+    "\n",
+    "print(new_string)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b0f96e39-7998-4b96-872e-d7809c19f54e",
+   "metadata": {},
+   "source": [
+    "38. Check if a string contains only digits \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "id": "9bf8f428-58d4-4067-b126-09f4a7e5bd33",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The string contains only digits!\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_string = \"1234\"\n",
+    "if my_string.isdigit():\n",
+    "    print(\"The string contains only digits!\")\n",
+    "else:\n",
+    "    print(\"The string does not contain only digits.\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 45,
+   "id": "cee6e2c0-b976-4cfc-95a8-bc0d1d09fd64",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The string contains only digits!\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_string = \"1234\"\n",
+    "if my_string.isdigit():\n",
+    "    print(\"The string contains only digits!\")\n",
+    "else:\n",
+    "    print(\"The string does not contain only digits.\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fe3ba6d6-bc31-46f1-b80e-64283c5f58bf",
+   "metadata": {},
+   "source": [
+    "39. Check if a string contains only alphabets. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "id": "224dde08-a0ed-4fe9-83d3-18a36f8532f9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The string does not contain only alphabets.\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_string = \"1234aditi\"\n",
+    "if my_string.isalpha():\n",
+    "    print(\"The string contains only alphabets!\")\n",
+    "else:\n",
+    "    print(\"The string does not contain only alphabets.\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "439e509d-986b-4002-9ac7-256e75ed551e",
+   "metadata": {},
+   "source": [
+    "40. Convert a string to a list of characters. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 47,
+   "id": "f029a76f-c9fd-4009-a62e-557abc502bea",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "girl and boy are not anagram.\n"
+     ]
+    }
+   ],
+   "source": [
+    "str1 = \"girl\"\n",
+    "str2 = \"boy\"\n",
+    "\n",
+    "# check if length is same\n",
+    "if(len(str1) == len(str2)):\n",
+    "\n",
+    "    # sort the strings\n",
+    "    sorted_str1 = sorted(str1)\n",
+    "    sorted_str2 = sorted(str2)\n",
+    "\n",
+    "    # if sorted char arrays are same\n",
+    "    if(sorted_str1 == sorted_str2):\n",
+    "        print(str1 + \" and \" + str2 + \" are anagram.\")\n",
+    "    else:\n",
+    "        print(str1 + \" and \" + str2 + \" are not anagram.\")\n",
+    "\n",
+    "else:\n",
+    "    print(str1 + \" and \" + str2 + \" are not anagram.\")\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "283d8e76-5f73-4c48-976c-7bc7b189b38c",
+   "metadata": {},
+   "source": [
+    "42. Encode a string using a Caesar cipher. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 48,
+   "id": "e1c82daa-4a03-4e5a-bbc8-5e2391143baf",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Plain Text is : HELLO EVERYONE\n",
+      "Shift pattern is : 1\n",
+      "Cipher Text is : IFMMP FWFSZPOF\n"
+     ]
+    }
+   ],
+   "source": [
+    "def encrypt_text(plaintext,n):\n",
+    "    ans = \"\"\n",
+    "    # iterate over the given text\n",
+    "    for i in range(len(plaintext)):\n",
+    "        ch = plaintext[i]\n",
+    "        \n",
+    "        # check if space is there then simply add space\n",
+    "        if ch==\" \":\n",
+    "            ans+=\" \"\n",
+    "        # check if a character is uppercase then encrypt it accordingly \n",
+    "        elif (ch.isupper()):\n",
+    "            ans += chr((ord(ch) + n-65) % 26 + 65)\n",
+    "        # check if a character is lowercase then encrypt it accordingly\n",
+    "        \n",
+    "        else:\n",
+    "            ans += chr((ord(ch) + n-97) % 26 + 97)\n",
+    "    \n",
+    "    return ans\n",
+    "\n",
+    "plaintext = \"HELLO EVERYONE\"\n",
+    "n = 1\n",
+    "print(\"Plain Text is : \" + plaintext)\n",
+    "print(\"Shift pattern is : \" + str(n))\n",
+    "print(\"Cipher Text is : \" + encrypt_text(plaintext,n))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6c7fe1b1-4074-4116-b9b0-47346107d417",
+   "metadata": {},
+   "source": [
+    "43. Decode a Caesar cipher encoded string.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 50,
+   "id": "5086045c-fe3b-4602-97f4-53d19db0b24c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter the message i.e to be decrypted:  girl\n",
+      "Enter the key to decrypt:  20\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Your decrypted message is:\n",
+      "\n",
+      "moxr\n"
+     ]
+    }
+   ],
+   "source": [
+    "def decrypt():\n",
+    "    \n",
+    "    #enter your encrypted message(string) below\n",
+    "    encrypted_message = input(\"Enter the message i.e to be decrypted: \").strip()\n",
+    "    \n",
+    "    letters=\"abcdefghijklmnopqrstuvwxyz\"\n",
+    "    \n",
+    "    #enter the key value to decrypt\n",
+    "    k = int(input(\"Enter the key to decrypt: \"))\n",
+    "    decrypted_message = \"\"\n",
+    "\n",
+    "    for ch in encrypted_message:\n",
+    "\n",
+    "        if ch in letters:\n",
+    "            position = letters.find(ch)\n",
+    "            new_pos = (position - k) % 26\n",
+    "            new_char = letters[new_pos]\n",
+    "            decrypted_message += new_char\n",
+    "        else:\n",
+    "            decrypted_message += ch\n",
+    "    print(\"Your decrypted message is:\\n\")\n",
+    "    print(decrypted_message)\n",
+    "\n",
+    "decrypt()\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "effaf619-222a-46b5-8bf6-bb12d3fc35c4",
+   "metadata": {},
+   "source": [
+    "44. Find the most frequent word in a string\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 52,
+   "id": "83d13131-d174-4644-8095-a16ef13305a0",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "the string is :\n",
+      "i i  i hate hate you\n"
+     ]
+    },
+    {
+     "ename": "NameError",
+     "evalue": "name 'defaultdict' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[52], line 6\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mthe string is :\u001b[39m\u001b[38;5;124m\"\u001b[39m)\n\u001b[1;32m      4\u001b[0m \u001b[38;5;28mprint\u001b[39m(a)\n\u001b[0;32m----> 6\u001b[0m my_temp \u001b[38;5;241m=\u001b[39m \u001b[43mdefaultdict\u001b[49m(\u001b[38;5;28mint\u001b[39m)\n\u001b[1;32m      8\u001b[0m \u001b[38;5;28;01mfor\u001b[39;00m sub \u001b[38;5;129;01min\u001b[39;00m a:\n\u001b[1;32m      9\u001b[0m     \u001b[38;5;28;01mfor\u001b[39;00m word \u001b[38;5;129;01min\u001b[39;00m sub\u001b[38;5;241m.\u001b[39msplit():\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'defaultdict' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "a=\"i i  i hate hate you\"\n",
+    "\n",
+    "print(\"the string is :\")\n",
+    "print(a)\n",
+    "\n",
+    "my_temp = defaultdict(int)\n",
+    "\n",
+    "for sub in a:\n",
+    "    for word in sub.split():\n",
+    "        my_temp[word] += 1\n",
+    "result = max(my_temp, key=my_temp.get)\n",
+    "\n",
+    "print(\"the world that has the maximum frequancy :\")\n",
+    "print(result)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b9f8fd9a-de62-40ea-8d72-72003edd8379",
+   "metadata": {},
+   "source": [
+    "45. Find all unique words in a string. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 54,
+   "id": "78147f32-dffe-400a-89dc-d1016f81e0c3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'aditi', 'vishakha', 'priya', 'ashwini', 'aarti', 'nutan'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "m=\"ashwini aditi aditi aditi priya nutan vishakha aarti\"\n",
+    "\n",
+    "unique_words = set(m.split())\n",
+    "print(unique_words)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "774890ff-18d5-4f45-a4fb-1c996c29f7f0",
+   "metadata": {},
+   "source": [
+    "46. Count the number of syllables in a string.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 55,
+   "id": "af16f27c-d2a7-4db4-bd07-7424a0be36ef",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def syllable_count(word):\n",
+    "    count = 0\n",
+    "    vowels = \"aeiou\"\n",
+    "    if word[0] in vowels:\n",
+    "        count += 1\n",
+    "    for index in range(1, len(word)):\n",
+    "        if word[index] in vowels and word[index - 1] not in vowels:\n",
+    "            count += 1\n",
+    "            if word.endswith(\"e\"):\n",
+    "                count -= 1\n",
+    "    if count == 0:\n",
+    "        count += 1\n",
+    "    return count\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "eab274b2-3778-40e6-ad1a-8ee0244ca23f",
+   "metadata": {},
+   "source": [
+    "47. Check if a string contains any special characters.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 56,
+   "id": "3a77de59-5d5b-4f6a-8a78-c03c1a0e17a1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "valid\n"
+     ]
+    }
+   ],
+   "source": [
+    "o=\"hai\"\n",
+    "import re\n",
+    "if(bool(re.match('^[a-zA-Z0-9]*$',o))==True):\n",
+    "    print(\"valid\")\n",
+    "else:\n",
+    "    print(\"invalid\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d3c82a8b-e225-48db-a58f-b7b2a36442fa",
+   "metadata": {},
+   "source": [
+    "48. Remove the nth word from a string. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 57,
+   "id": "2a33fd70-05f9-41da-b15c-f45f190954ba",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter the String: \n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      " madhuri\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter a Word to Delete: \n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      " r\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "madhui\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"Enter the String: \")\n",
+    "text = input()\n",
+    "\n",
+    "print(\"Enter a Word to Delete: \")\n",
+    "word = input()\n",
+    "\n",
+    "text = text.replace(word, \"\")\n",
+    "\n",
+    "print()\n",
+    "print(text)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8c526717-e1ee-44e0-90e7-37ed79ab77bc",
+   "metadata": {},
+   "source": [
+    "49. Insert a word at the nth position in a string\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 58,
+   "id": "cf0c4d88-4a43-4c64-8ff4-a4c1befe66f8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The original string : nishigandha\n",
+      "The add string : rahade\n",
+      "The string after performing addition : nishigandharahade\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = 'nishigandha'\n",
+    "\n",
+    "# initializing add_string\n",
+    "add_string = \"rahade\"\n",
+    "\n",
+    "# printing original string\n",
+    "print(\"The original string : \" + a)\n",
+    "\n",
+    "# printing add string\n",
+    "print(\"The add string : \" + add_string)\n",
+    "\n",
+    "# initializing N\n",
+    "N = 12\n",
+    "\n",
+    "# using list slicing\n",
+    "# Add substring at specific index\n",
+    "res = a[ : N] + add_string + a[N : ]\n",
+    "\t\n",
+    "# print result\n",
+    "print(\"The string after performing addition : \" + str(res))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c18fb0bc-34fa-46b9-b482-c56ea74da610",
+   "metadata": {},
+   "source": [
+    "50. Convert a CSV string to a list of lists. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "id": "1d1208a5-850a-4394-835d-bd3feb3f4a06",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import csv\n",
+    "\n",
+    "with open('out.csv', 'w', newline='') as f:\n",
+    "    writer = csv.writer(f)\n",
+    "    writer.writerows(a)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "50f4859d-4e42-450d-a8b4-3f6e5ba584af",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "id": "84f60a42-3a9f-404c-80d3-fd1c37abc9c5",
+   "metadata": {},
+   "source": [
+    "List Based Practice Problem : \n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "575565be-e3ab-41f4-a155-0a5815dfeec4",
+   "metadata": {},
+   "source": [
+    "1. Create a list with integers from 1 to 10. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 61,
+   "id": "db035d49-4211-4f4b-93c0-f66ba01f07ef",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n"
+     ]
+    }
+   ],
+   "source": [
+    "l=[1,2,3,4,5,6,7,8,9,10]\n",
+    "print(l)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5a7e88c0-3952-4905-bd4c-45ac741c61f7",
+   "metadata": {},
+   "source": [
+    "2. Find the length of a list without using the `len()` function\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 62,
+   "id": "1fdebbc4-f1d1-46ff-8bc9-4e0f57374cca",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "10\n"
+     ]
+    }
+   ],
+   "source": [
+    "l=[1,2,3,4,5,6,7,8,9,10]\n",
+    "count = 0\n",
+    "\n",
+    "for i in l:\n",
+    "    \n",
+    "    count+=1\n",
+    "print(count)\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0b504681-6d79-46a7-8469-27efe5da2cab",
+   "metadata": {},
+   "source": [
+    "3. append an element to the end of a list.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 63,
+   "id": "b71ca624-fc2e-4379-acb0-7400f70f9da6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]\n"
+     ]
+    }
+   ],
+   "source": [
+    "l=[1,2,3,4,5,6,7,8,9,10]\n",
+    "l.append(11)\n",
+    "print(l)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3561e314-8297-459f-a6b7-a98c174c20c0",
+   "metadata": {},
+   "source": [
+    "4. Insert an element at a specific index in a list. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 64,
+   "id": "1614f473-3a4c-47d5-8264-3e46c785199c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 4, 5, 6, 7, 8, 50, 9, 10]\n"
+     ]
+    }
+   ],
+   "source": [
+    "l=[1,2,3,4,5,6,7,8,9,10]\n",
+    "l.insert(8,50)\n",
+    "print(l)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a58bf46e-6ffa-42e5-a02a-25263ac96439",
+   "metadata": {},
+   "source": [
+    "5. Remove an element from a list by its value.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 65,
+   "id": "33ee4540-0223-4551-980d-24ba003c3882",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 4, 5, 6, 7, 9, 10]\n"
+     ]
+    }
+   ],
+   "source": [
+    "l=[1,2,3,4,5,6,7,8,9,10]\n",
+    "l.remove(8)\n",
+    "print(l)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5c0b8b76-15cd-4acd-b599-0fe8928c31d5",
+   "metadata": {},
+   "source": [
+    "6. Remove an element from a list by its index. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 66,
+   "id": "34205a41-a5ec-471d-963d-1d79e0ef914b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[2, 3, 4, 5, 6, 7, 8, 9, 10]\n"
+     ]
+    }
+   ],
+   "source": [
+    "l=[1,2,3,4,5,6,7,8,9,10]\n",
+    "l.pop(0)\n",
+    "print(l)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "320d7dd5-a808-45e9-9106-1cdedcee7fa4",
+   "metadata": {},
+   "source": [
+    "7. Check if an element exists in a list.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 67,
+   "id": "036f1d8c-c37a-4d02-be17-3b20eebd0cf9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "exist\n"
+     ]
+    }
+   ],
+   "source": [
+    "l=[1,2,3,4,5,6,7,8,9,10]\n",
+    "i=8\n",
+    "if i in l:\n",
+    "    print(\"exist\")\n",
+    "else:\n",
+    "    print(\"not exist\")\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f47eba52-b63a-4070-80ee-fb9c2b6591f5",
+   "metadata": {},
+   "source": [
+    "8. Find the index of the first occurrence of an element in a list\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 68,
+   "id": "bbac9dc9-4af9-425d-b54e-f909e99ed0c0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0"
+      ]
+     },
+     "execution_count": 68,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "l=[1,2,3,4,5,6,7,8,9,10,1]\n",
+    "l.index(1)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "decea4b2-3702-4396-b79d-f7577ecb4ec2",
+   "metadata": {},
+   "source": [
+    "9. Count the occurrences of an element in a list. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 69,
+   "id": "a2a8009e-6f00-40e0-9b81-8e9ad506a5c3",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2"
+      ]
+     },
+     "execution_count": 69,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "l=[1,2,3,4,5,6,7,8,9,10,1]\n",
+    "l.count(1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "897e6f80-ba3a-4e29-a0cd-7c2760adbd1a",
+   "metadata": {},
+   "source": [
+    "10. Reverse the order of elements in a list.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 70,
+   "id": "513232df-f58e-423b-86a8-d90f4ea4f81b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]"
+      ]
+     },
+     "execution_count": 70,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "l=[1,2,3,4,5,6,7,8,9,10,1]\n",
+    "l[::-1]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "47c72d96-ae81-4083-882b-fda30fb86702",
+   "metadata": {},
+   "source": [
+    "11. Sort a list in ascending order. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 71,
+   "id": "3bc0d9e1-1b7f-4ed8-9918-0abffb7e1721",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n"
+     ]
+    }
+   ],
+   "source": [
+    "l=[1,2,3,4,5,6,7,8,9,10,1]\n",
+    "l.sort()\n",
+    "print(l)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "113fcb1e-20b6-44be-b1c4-6f8bd97b90c3",
+   "metadata": {},
+   "source": [
+    "12. Sort a list in descending order. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 72,
+   "id": "e8517b23-1cad-41f3-b3bb-af95818def60",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Sorted in descending order:  [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1]\n"
+     ]
+    }
+   ],
+   "source": [
+    "l = sorted([1,2,3,4,5,6,7,8,9,10,1], reverse=True)\n",
+    "\n",
+    "print(\"Sorted in descending order: \", l)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4aded488-23f7-4de6-98cd-7d32cee47206",
+   "metadata": {},
+   "source": [
+    "13. Create a list of even numbers from 1 to 20. \n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4044b7ed-f96a-4bcb-8666-6419f569a56f",
+   "metadata": {},
+   "source": [
+    "13. Create a list of even numbers from 1 to 20. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 74,
+   "id": "c66020b3-c9cc-4348-95cb-5702774ac75a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]\n"
+     ]
+    }
+   ],
+   "source": [
+    "l1=[2,4,6,8,10,12,14,16,18,20]\n",
+    "print(l1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3e1bde13-2810-4846-9310-b5daf589a6ad",
+   "metadata": {},
+   "source": [
+    "14. Create a list of odd numbers from 1 to 20. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 75,
+   "id": "41ef6df1-a3d8-49cf-b1a1-be5b01c7fbc5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 3, 5, 7, 9, 11, 13, 15, 17, 19]\n"
+     ]
+    }
+   ],
+   "source": [
+    "l1=[1,3,5,7,9,11,13,15,17,19]\n",
+    "print(l1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bc2b6228-1da1-40d9-8eef-1aca4859a8be",
+   "metadata": {},
+   "source": [
+    "15. Find the sum of all elements in a list. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 76,
+   "id": "510d5a13-1fa4-42ec-9b62-fa7984929558",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "55\n"
+     ]
+    }
+   ],
+   "source": [
+    "l=[1,2,3,4,5,6,7,8,9,10]\n",
+    "print(sum(l))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4abd4201-6fc6-405f-87aa-7cb9b675ce03",
+   "metadata": {},
+   "source": [
+    "16. Find the maximum value in a list. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 77,
+   "id": "3d1d9aa9-117c-42a5-8728-f363594c165c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "10\n"
+     ]
+    }
+   ],
+   "source": [
+    "l=[1,2,3,4,5,6,7,8,9,10]\n",
+    "l=max(l)\n",
+    "print(l)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fd34c5c9-3c28-4e6a-a0d3-de5b3c7d4a62",
+   "metadata": {},
+   "source": [
+    "18. Create a list of squares of numbers from 1 to 10. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 78,
+   "id": "c0e68a55-b2dc-475f-a1c8-36b11944aa76",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "List with square of integers from 1 to 10:\n",
+      "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\n"
+     ]
+    }
+   ],
+   "source": [
+    "l = []\n",
+    "\n",
+    "for i in range(1, 11):\n",
+    "    l.append(i * i)\n",
+    "\n",
+    "print(\"List with square of integers from 1 to 10:\")\n",
+    "print(l)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f9b4f645-cc31-4caa-ae04-d9ed38d50333",
+   "metadata": {},
+   "source": [
+    "19. Create a list of random numbers.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 82,
+   "id": "57f2a9ad-0b1b-44f9-aef2-f0511fedf521",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[4, 4, 9, 1, 6, 10, 5, 7, 9, 3]\n"
+     ]
+    }
+   ],
+   "source": [
+    "import random\n",
+    "rand_list=[]\n",
+    "n=10\n",
+    "for i in range(n):\n",
+    "    rand_list.append(random.randint(1,10))\n",
+    "print(rand_list)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "586a1d5d-73f1-4a44-b43f-1ecccddc9b3a",
+   "metadata": {},
+   "source": [
+    "20. Remove duplicates from a list. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 83,
+   "id": "519b6f40-0157-44b1-8738-2971e9956b5a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}\n"
+     ]
+    }
+   ],
+   "source": [
+    "l=[1,2,3,4,5,6,7,8,9,10,4,6,7,8,0,3,2,1]\n",
+    "\n",
+    "dup_items = set()\n",
+    "uniq_items = []\n",
+    "for x in l:\n",
+    "    if x not in dup_items:\n",
+    "        uniq_items.append(x)\n",
+    "        dup_items.add(x)\n",
+    "        \n",
+    "print(dup_items)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0d97edc0-544d-4244-a8fc-2a7061c6257b",
+   "metadata": {},
+   "source": [
+    "21. Find the common elements between two lists. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 84,
+   "id": "4f9f4a39-8ed9-47a0-b377-e4341a3496ac",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[2, 3, 4, 6, 10]"
+      ]
+     },
+     "execution_count": 84,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "l1=[1,2,3,4,5,6,7,9,4,6,2,10,14,16]\n",
+    "l2=[2,3,4,6,8,10]\n",
+    "list(set(l1).intersection(l2))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ac17a556-01b9-4d8c-a1b1-9a2366d2b9ce",
+   "metadata": {},
+   "source": [
+    "22. Find the difference between two lists.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 85,
+   "id": "7d904cc1-8268-4120-b32e-5d09279d475f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 5, 7, 9, 14, 16]"
+      ]
+     },
+     "execution_count": 85,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "l1=[1,2,3,4,5,6,7,9,4,6,2,10,14,16]\n",
+    "l2=[2,3,4,6,8,10]\n",
+    "list(set(l1).difference(l2))\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b71a8b96-2a45-4d15-ab98-20affca36cc7",
+   "metadata": {},
+   "source": [
+    "23. Merge two lists. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 87,
+   "id": "d196cd34-84b8-4285-b051-f61ff4ee5420",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Concatenated list using naive method : [1, 2, 3, 4, 5, 6, 7, 9, 4, 6, 2, 10, 14, 16, 2, 3, 4, 6, 8, 10]\n"
+     ]
+    }
+   ],
+   "source": [
+    "l1=[1,2,3,4,5,6,7,9,4,6,2,10,14,16]\n",
+    "l2=[2,3,4,6,8,10]\n",
+    "for i in l2:\n",
+    "    l1.append(i)\n",
+    "\n",
+    "# printing concatenated list\n",
+    "print(\"Concatenated list using naive method : \" + str(l1))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f1606c83-e6a5-46ca-98c6-ed8feacd5114",
+   "metadata": {},
+   "source": [
+    "24. Multiply all elements in a list by 2.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 88,
+   "id": "83356bcf-5725-489e-b225-30decdc163e0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1,\n",
+       " 2,\n",
+       " 3,\n",
+       " 4,\n",
+       " 5,\n",
+       " 6,\n",
+       " 7,\n",
+       " 9,\n",
+       " 4,\n",
+       " 6,\n",
+       " 2,\n",
+       " 10,\n",
+       " 14,\n",
+       " 16,\n",
+       " 1,\n",
+       " 2,\n",
+       " 3,\n",
+       " 4,\n",
+       " 5,\n",
+       " 6,\n",
+       " 7,\n",
+       " 9,\n",
+       " 4,\n",
+       " 6,\n",
+       " 2,\n",
+       " 10,\n",
+       " 14,\n",
+       " 16]"
+      ]
+     },
+     "execution_count": 88,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "l1=[1,2,3,4,5,6,7,9,4,6,2,10,14,16]\n",
+    "l1*2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "56b2011c-3376-4f84-ad94-e81341bcff2a",
+   "metadata": {},
+   "source": [
+    "25. Filter out all even numbers from a list.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 89,
+   "id": "50c50841-5811-4c83-8dc5-3a3d3d85e088",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[2, 4, 6, 8, 10, 12, 14, 16]\n"
+     ]
+    }
+   ],
+   "source": [
+    "l=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]\n",
+    "\n",
+    "out = []\n",
+    "\n",
+    "for num in l:\n",
+    "    if num % 2 == 0:\n",
+    "        out.append(num)\n",
+    "        \n",
+    "print(out)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2cd82464-7ed3-4269-a7bd-9e6c83c93d3e",
+   "metadata": {},
+   "source": [
+    "26. Convert a list of strings to a list of integers. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 90,
+   "id": "23d30615-346d-472f-b8c5-d6b0506fa1c9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The original list : [['24'], ['45'], ['78'], ['40']]\n",
+      "The list after conversion : [[2, 4], [4, 5], [7, 8], [4, 0]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "l1 = [['24'], ['45'], ['78'], ['40']]\n",
+    " \n",
+    "# printing original list\n",
+    "print(\"The original list : \" + str(l1))\n",
+    " \n",
+    "# using list comprehension\n",
+    "# converting string list to integer list\n",
+    "res = [[int(i) for i in sub] for i in l1 for sub in i]\n",
+    " \n",
+    "# print result\n",
+    "print(\"The list after conversion : \" + str(res))\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4a132f11-0337-4080-8c30-c37c35717cb2",
+   "metadata": {},
+   "source": [
+    "27. Convert a list of integers to a list of strings. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 92,
+   "id": "18e8a4d2-cf04-4be7-a57a-3e434d978d2d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['4', '7', '3', '8', '4', '5', '7', '10']\n"
+     ]
+    }
+   ],
+   "source": [
+    "l=[4,7,3,8,4,5,7,10]\n",
+    "# mapping\n",
+    "l_string =map(str, l)\n",
+    "\n",
+    "print(list(l_string))\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "def2fa89-553d-4218-94b9-452c7e29558b",
+   "metadata": {},
+   "source": [
+    "28. Flatten a nested list.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 93,
+   "id": "e40f9940-0f3e-4a8e-b026-7035483c2232",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 4, 5, 6, 7, 8, 9]\n"
+     ]
+    }
+   ],
+   "source": [
+    "l1 = [[1],[2,3],[4,5,6,7,8,9]]\n",
+    "\n",
+    "flat_list = [num for sublist in l1 for num in sublist]\n",
+    "print(flat_list)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b73fd512-c25f-47e5-9686-62cd8c75743b",
+   "metadata": {},
+   "source": [
+    "29. Create a list of the first 10 Fibonacci numbers. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 94,
+   "id": "6a135ec7-f65e-453b-b6d5-ece88e141be8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]\n"
+     ]
+    }
+   ],
+   "source": [
+    "fibonaccy_number = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]\n",
+    "print(fibonaccy_number)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e365409e-6e0d-441e-bb56-472902ebffa0",
+   "metadata": {},
+   "source": [
+    "30. Check if a list is sorted. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 95,
+   "id": "f03d8477-f29b-41c8-9791-51b19ce052e4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Original list : [1, 4, 5, 8, 10]\n",
+      "Yes, List is sorted.\n"
+     ]
+    }
+   ],
+   "source": [
+    "l1 = [1, 4, 5, 8, 10]\n",
+    "\n",
+    "# printing original list\n",
+    "print (\"Original list : \" + str(l1))\n",
+    "\n",
+    "# using naive method to\n",
+    "# check sorted list\n",
+    "flag = 0\n",
+    "i = 1\n",
+    "while i < len(l1):\n",
+    "\tif(l1[i] < l1[i - 1]):\n",
+    "\t\tflag = 1\n",
+    "\ti += 1\n",
+    "\t\n",
+    "# printing result\n",
+    "if (not flag) :\n",
+    "\tprint (\"Yes, List is sorted.\")\n",
+    "else :\n",
+    "\tprint (\"No, List is not sorted.\")\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "972d37db-ec08-41a4-99cd-a6040980d977",
+   "metadata": {},
+   "source": [
+    "31. Rotate a list to the left by `n` positions. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 96,
+   "id": "5d0ea10d-b8b6-4178-b7bb-93c0ec010ec7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[4, 5, 6, 1, 2, 3]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def leftRotate(lists, num):\n",
+    "\toutput_list = []\n",
+    "\n",
+    "\t# Will add values from n to the new list\n",
+    "\tfor item in range(len(lists) - num, len(lists)):\n",
+    "\t\toutput_list.append(lists[item])\n",
+    "\n",
+    "\t# Will add the values before\n",
+    "\t# n to the end of new list\n",
+    "\tfor item in range(0, len(lists) - num):\n",
+    "\t\toutput_list.append(lists[item])\n",
+    "\n",
+    "\treturn output_list\n",
+    "\n",
+    "\n",
+    "# Driver Code\n",
+    "rotate_num = 3\n",
+    "list_1 = [1, 2, 3, 4, 5, 6]\n",
+    "\n",
+    "print(leftRotate(list_1, rotate_num))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "311cbd4f-695b-41d4-ab6e-8f3958808ca9",
+   "metadata": {},
+   "source": [
+    "32. Rotate a list to the right by `n` positions. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 97,
+   "id": "8dd8717c-49b3-441b-a7ec-5387d5433da4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[4, 5, 6, 1, 2, 3]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def rightRotate(lists, num):\n",
+    "\toutput_list = []\n",
+    "\n",
+    "\t# Will add values from n to the new list\n",
+    "\tfor item in range(len(lists) - num, len(lists)):\n",
+    "\t\toutput_list.append(lists[item])\n",
+    "\n",
+    "\t# Will add the values before\n",
+    "\t# n to the end of new list\n",
+    "\tfor item in range(0, len(lists) - num):\n",
+    "\t\toutput_list.append(lists[item])\n",
+    "\n",
+    "\treturn output_list\n",
+    "\n",
+    "\n",
+    "# Driver Code\n",
+    "rotate_num = 3\n",
+    "list_1 = [1, 2, 3, 4, 5, 6]\n",
+    "\n",
+    "print(rightRotate(list_1, rotate_num))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4b93e8af-af81-4804-82f6-8db560b31045",
+   "metadata": {},
+   "source": [
+    "33. Create a list of prime numbers up to 50. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 98,
+   "id": "229b97da-aceb-4c3e-a4d1-ac1b82b583c7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def prime_numbers(n):\n",
+    "    primes = []\n",
+    "    for i in range(2, n + 1):\n",
+    "        for j in range(2, int(i ** 0.5) + 1):\n",
+    "            if i%j == 0:\n",
+    "                break\n",
+    "        else:\n",
+    "            primes.append(i)\n",
+    "    return primes\n",
+    "\n",
+    "prime_list = prime_numbers(50)\n",
+    "print(prime_list)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d37745ec-74b9-416b-9da2-fd773d1fcff5",
+   "metadata": {},
+   "source": [
+    "34. Split a list into chunks of size `n`. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 99,
+   "id": "85254280-15a5-4772-ae00-ed35bd933933",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[['girlss', 'for', 'boys', 'like', 'lucky'], ['nerdy', 'bird', 'love', 'questions', 'words'], ['life']]\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_list = ['girlss', 'for', 'boys', 'like',\n",
+    "\t\t'lucky','nerdy', 'bird', 'love',\n",
+    "\t\t\t'questions','words', 'life']\n",
+    "\n",
+    "# Yield successive n-sized\n",
+    "# chunks from l.\n",
+    "def divide_chunks(l, n):\n",
+    "\t\n",
+    "\t# looping till length l\n",
+    "\tfor i in range(0, len(l), n):\n",
+    "\t\tyield l[i:i + n]\n",
+    "\n",
+    "# How many elements each\n",
+    "# list should have\n",
+    "n = 5\n",
+    "\n",
+    "x = list(divide_chunks(my_list, n))\n",
+    "print (x)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "366d7cd2-0bdb-4491-b91e-a14f1564f8d6",
+   "metadata": {},
+   "source": [
+    "35. Find the second largest number in a list. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 100,
+   "id": "237926fc-8d25-4380-9e42-a9f38e5460e3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Second highest number is :  45\n"
+     ]
+    }
+   ],
+   "source": [
+    "list1 = [10, 20, 4, 45, 99]\n",
+    "\n",
+    "mx = max(list1[0], list1[1])\n",
+    "secondmax = min(list1[0], list1[1])\n",
+    "n = len(list1)\n",
+    "for i in range(2,n):\n",
+    "\tif list1[i] > mx:\n",
+    "\t\tsecondmax = mx\n",
+    "\t\tmx = list1[i]\n",
+    "\telif list1[i] > secondmax and \\\n",
+    "\t\tmx != list1[i]:\n",
+    "\t\tsecondmax = list1[i]\n",
+    "\telif mx == secondmax and \\\n",
+    "\t\tsecondmax != list1[i]:\n",
+    "\t\tsecondmax = list1[i]\n",
+    "\n",
+    "print(\"Second highest number is : \",\\\n",
+    "\tstr(secondmax))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c4e2ec20-e29b-41e1-a36e-80f12f3b025c",
+   "metadata": {},
+   "source": [
+    "36. Replace every element in a list with its square. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 101,
+   "id": "f5e2418a-83c3-46d1-9e15-54d09dc5f832",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 16, 9, 4, 25]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def square_list(list1):\n",
+    "    for i in list1:\n",
+    "        list1[list1.index(i)] = i**2\n",
+    "    print(list1)\n",
+    "\n",
+    "square_list([1, 2, 3, 4, 5])\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ce70cdbf-35fc-4fe8-818c-a58005546478",
+   "metadata": {},
+   "source": [
+    "37. Convert a list to a dictionary where list elements become keys and their indices become values.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 102,
+   "id": "4dbb6cd7-e726-4b40-861c-3954b8c3d789",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'red': 1, 'blue': 2, 'green': 3}\n"
+     ]
+    }
+   ],
+   "source": [
+    "color=[('red',1),('blue',2),('green',3)]\n",
+    "d=dict(color)\n",
+    "print(d)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4fa03e7e-4623-485d-9e9e-96c5e0585450",
+   "metadata": {},
+   "source": [
+    "38. Shuffle the elements of a list randomly. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 103,
+   "id": "114594ca-098c-4f4d-a247-f5f0e2513fba",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[3, 0, 1, 4, 2]\n"
+     ]
+    }
+   ],
+   "source": [
+    "import random\n",
+    "\n",
+    "l = [0, 1, 2, 3, 4]\n",
+    "\n",
+    "random.shuffle(l)\n",
+    "print(l)\n",
+    "# [0, 3, 2, 4, 1]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "60b3244c-0da4-4fb2-ab9f-f71a6cd3817f",
+   "metadata": {},
+   "source": [
+    "39. Create a list of the first 10 factorial numbers.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 104,
+   "id": "53c39733-4aef-45fc-ad56-c9495c431e3b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Factorial of 1 is 1\n",
+      "Factorial of 2 is 2\n",
+      "Factorial of 3 is 12\n",
+      "Factorial of 4 is 288\n",
+      "Factorial of 5 is 34560\n",
+      "Factorial of 6 is 24883200\n",
+      "Factorial of 7 is 125411328000\n",
+      "Factorial of 8 is 5056584744960000\n",
+      "Factorial of 9 is 1834933472251084800000\n",
+      "Factorial of 10 is 6658606584104736522240000000\n"
+     ]
+    }
+   ],
+   "source": [
+    "input_set = {1, 2, 3, 4, 5,6,7,8,9,10}\n",
+    "fact = 1\n",
+    "for item in input_set:\n",
+    "    for number in range(1,item+1):\n",
+    "        fact = fact * number\n",
+    "    print (\"Factorial of\", item, \"is\", fact)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b8bf8174-9f11-4fd1-879b-a8c698f4cb82",
+   "metadata": {},
+   "source": [
+    "40. Check if two lists have at least one element in common\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 105,
+   "id": "99ae5259-ca41-46df-a9f3-187b8655f7c3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Python code to check if two lists\n",
+    "# have any element in common\n",
+    "\n",
+    "# Initialization of list\n",
+    "list1 = [1, 2, 3, 4, 55]\n",
+    "list2 = [2, 3, 90, 22]\n",
+    "\n",
+    "# using any function\n",
+    "out = any(check in list1 for check in list2)\n",
+    "\n",
+    "# Checking condition\n",
+    "if out:\n",
+    "\tprint(\"True\")\n",
+    "else :\n",
+    "\tprint(\"False\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bf9f9f96-bd37-41b0-a314-08efc742ebcd",
+   "metadata": {},
+   "source": [
+    "41. Remove all elements from a list. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 106,
+   "id": "f2c0db84-d6e4-40fe-a423-3715a4419f90",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[]\n"
+     ]
+    }
+   ],
+   "source": [
+    "l=[1,2,3,4,5,6,7,89,10]\n",
+    "l.clear()\n",
+    "print(l)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c94ee20b-4477-4f7c-ad0e-643115fed9ef",
+   "metadata": {},
+   "source": [
+    "42. Replace negative numbers in a list with 0. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 107,
+   "id": "b29d8986-a1a5-4797-965d-f96983b82ee7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "list after changes: [1, 2, 0, 4, 5, 0, 7, 0, 0]\n"
+     ]
+    }
+   ],
+   "source": [
+    "l=[1,2,-3,4,5,-6,7,-89,-10]\n",
+    "\n",
+    "for i in range(len(l)):\n",
+    "    if l[i] < 0:\n",
+    "        l[i] = 0\n",
+    "print(f\"list after changes: {l}\")\n",
+    "        "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f90bcf7e-6195-4802-ac3e-8fc8c6976037",
+   "metadata": {},
+   "source": [
+    "43. Convert a string into a list of words. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 108,
+   "id": "b06a78eb-e880-4fd1-a9fd-6cff8df4a713",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['hello', 'i', 'am', 'here']\n"
+     ]
+    }
+   ],
+   "source": [
+    "s = \"hello i am here\"\n",
+    "\n",
+    "res = s.split()\n",
+    "print(res)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8ad535a3-c181-4990-b578-6463357d6c00",
+   "metadata": {},
+   "source": [
+    "44. Convert a list of words into a string. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 109,
+   "id": "d85932f9-226c-4075-834f-6fef8aa32bf9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "girlboyparentsyoungold\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Python program to convert a list to string\n",
+    "\n",
+    "def listToString(s):\n",
+    "\n",
+    "\t# initialize an empty string\n",
+    "\tstr1 = \"\"\n",
+    "\n",
+    "\t# traverse in the string\n",
+    "\tfor ele in s:\n",
+    "\t\tstr1 += ele\n",
+    "\n",
+    "\t# return string\n",
+    "\treturn str1\n",
+    "# Driver code\n",
+    "s = ['girl','boy','parents','young','old']\n",
+    "print(listToString(s))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "786f65e9-4788-4dd5-a390-a0bd852ce6b6",
+   "metadata": {},
+   "source": [
+    "45. Create a list of the first `n` powers of 2. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 110,
+   "id": "43ef7f05-96f7-43f4-ba64-f3dc5dd3f31a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The total terms are: 10\n",
+      "2 raised to power 0 is 1\n",
+      "2 raised to power 1 is 2\n",
+      "2 raised to power 2 is 4\n",
+      "2 raised to power 3 is 8\n",
+      "2 raised to power 4 is 16\n",
+      "2 raised to power 5 is 32\n",
+      "2 raised to power 6 is 64\n",
+      "2 raised to power 7 is 128\n",
+      "2 raised to power 8 is 256\n",
+      "2 raised to power 9 is 512\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Display the powers of 2 using anonymous function\n",
+    "\n",
+    "terms = 10\n",
+    "\n",
+    "# Uncomment code below to take input from the user\n",
+    "# terms = int(input(\"How many terms? \"))\n",
+    "\n",
+    "# use anonymous function\n",
+    "result = list(map(lambda x: 2 ** x, range(terms)))\n",
+    "\n",
+    "print(\"The total terms are:\",terms)\n",
+    "for i in range(terms):\n",
+    "   print(\"2 raised to power\",i,\"is\",result[i])\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bd822b4d-c29f-47fc-9e1d-af74f25387ad",
+   "metadata": {},
+   "source": [
+    "46. Find the longest string in a list of strings.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 111,
+   "id": "fb636d4c-effe-4909-875e-777591f1a603",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Longest String is  :  watermelon\n"
+     ]
+    }
+   ],
+   "source": [
+    "#input list\n",
+    "list1 = ['apple', 'banana', 'watermelon', 'orange'] \n",
+    "res = max(list1, key=len) \n",
+    "print(\"Longest String is  : \", res)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c7d855f2-f022-44de-933a-e7200e601d58",
+   "metadata": {},
+   "source": [
+    "47. Find the shortest string in a list of strings. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 112,
+   "id": "776208e1-1b96-4bda-8ab1-33eb6cffaf8c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "shortest String is  :  apple\n"
+     ]
+    }
+   ],
+   "source": [
+    "#input list\n",
+    "list1 = ['apple', 'banana', 'watermelon', 'orange'] \n",
+    "res = min(list1, key=len) \n",
+    "print(\"shortest String is  : \", res)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a54d1769-25d7-452d-880a-01118f74d9d8",
+   "metadata": {},
+   "source": [
+    "48. Create a list of the first `n` triangular numbers.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 113,
+   "id": "1606e09f-1905-4c6b-b3e6-3d255323a09e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 3, 6, 10, 15, 21, 28, 36, 45, 55]\n"
+     ]
+    }
+   ],
+   "source": [
+    "limit = 10\n",
+    "triangle_nums = []\n",
+    "num = 0\n",
+    "for i in range(1, limit + 1):\n",
+    "    num += i\n",
+    "    triangle_nums.append(num)\n",
+    "print(triangle_nums)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f6640547-ca05-4551-9802-41c4a68ad69a",
+   "metadata": {},
+   "source": [
+    "49. Check if a list contains another list as a subsequence. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 114,
+   "id": "0eaeec50-84d3-40b0-8811-d3fd1224c53c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Original list : [9, 4, 5, 8, 10]\n",
+      "Original sub list : [10, 5, 4]\n"
+     ]
+    }
+   ],
+   "source": [
+    "test_list = [9, 4, 5, 8, 10]\n",
+    "sub_list = [10, 5, 4]\n",
+    "\n",
+    "# printing original lists\n",
+    "print(\"Original list : \" + str(test_list))\n",
+    "print(\"Original sub list : \" + str(sub_list))\n",
+    "\n",
+    "# using all() to\n",
+    "# check subset of list\n",
+    "flag = 0\n",
+    "if(all(x in test_list for x in sub_list)):\n",
+    "\tflag = 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b2e7e6ca-71a2-40fc-bb82-970da93bd2d4",
+   "metadata": {},
+   "source": [
+    "50. Swap two elements in a list by their indices. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 115,
+   "id": "c7d537f1-bc22-4e6f-b91c-ddd64aac6c49",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "List of fruits before swap:\n",
+      "['oranges', 'grapes', 'bananas']\n",
+      "\n",
+      "List of fruits after swap:\n",
+      "['bananas', 'grapes', 'oranges']\n"
+     ]
+    }
+   ],
+   "source": [
+    "#given list\n",
+    "fruits = [\"oranges\", \"grapes\", \"bananas\"]\n",
+    "\n",
+    "print(\"List of fruits before swap:\")\n",
+    "print(fruits)\n",
+    "\n",
+    "#swap elements at index 0 and 2\n",
+    "fruits[0], fruits[2] = fruits[2], fruits[0]\n",
+    "\n",
+    "print(\"\\nList of fruits after swap:\")\n",
+    "print(fruits)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b8e862c1-afda-4393-bdb6-06c2eb58d715",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "id": "407ad4b4-8aaa-4669-a775-134e97a421cf",
+   "metadata": {},
+   "source": [
+    "Tuple Based Practice Problem :\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0fd178cd-be02-46aa-8f81-2b265bd1542f",
+   "metadata": {},
+   "source": [
+    "1. Create a tuple with integers from 1 to 5. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 116,
+   "id": "b90ecd3d-8567-4721-bf55-9e7fd1255f85",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(1, 2, 3, 4, 5)\n"
+     ]
+    }
+   ],
+   "source": [
+    "w=(1,2,3,4,5)\n",
+    "print(w)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fb542b9a-bc84-4f42-b5b4-6d5370ceb95a",
+   "metadata": {},
+   "source": [
+    "2. Access the third element of a tuple. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 117,
+   "id": "b7edbe43-b256-4abb-a4bb-7e8768c8d17a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "aditi\n"
+     ]
+    }
+   ],
+   "source": [
+    "tuples = ('aaradhya','shunham','aditi','priya','nayan','vedant','amol')\n",
+    "result = tuples[2]\n",
+    "print(result)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2f608dda-491b-49c0-bb14-6e58a4d92f1e",
+   "metadata": {},
+   "source": [
+    "3. Find the length of a tuple without using the `len()` function\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 118,
+   "id": "f4fe8ce5-5565-47ae-b421-4c288914d297",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "7\n"
+     ]
+    }
+   ],
+   "source": [
+    "#take user input\n",
+    "tuples = ('aaradhya','shunham','aditi','priya','nayan','vedant','amol')\n",
+    "\n",
+    "count = 0\n",
+    "\n",
+    "for i in tuples:\n",
+    " \n",
+    "    count+=1\n",
+    "print(count)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "902c3700-8384-4622-b00e-a63b1d2db685",
+   "metadata": {},
+   "source": [
+    "4. Count the occurrences of an element in a tuple. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 120,
+   "id": "0361421c-c378-490b-815d-10e1a842f366",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Number of Counts 30 : 3\n"
+     ]
+    }
+   ],
+   "source": [
+    "t = (30, 50, 10, 30, 70, 50, 30)\n",
+    "print(\"Number of Counts 30 :\",t.count(30))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a4690c9d-3dae-4cc7-b6b2-862f315b72cb",
+   "metadata": {},
+   "source": [
+    "5. Find the index of the first occurrence of an element in a tuple.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 121,
+   "id": "1aa6cb6f-e4af-43a4-ab8a-bb8b2b0f3378",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_tuple = ( 4, 2, 5, 6, 7, 5)\n",
+    "print(my_tuple.index(5))\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5a2abd6c-a2ab-4cb0-ae45-c795653d8b85",
+   "metadata": {},
+   "source": [
+    " 6. Check if an element exists in a tuple. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 123,
+   "id": "d39f7d45-0ea0-46d5-9272-70fcf693b0ae",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "tuplex = (\"w\", 3, \"r\", \"e\", \"s\", \"o\", \"u\", \"r\", \"c\", \"e\")\n",
+    "print(\"r\" in tuplex)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d5b7a595-c659-4faa-af3d-f4e96a9fb30f",
+   "metadata": {},
+   "source": [
+    "7. Convert a tuple to a list. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 124,
+   "id": "dba010a8-eea8-4a1b-b32a-f0e3656b869d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['w', 3, 'r', 'e', 's', 'o', 'u', 'r', 'c', 'e']"
+      ]
+     },
+     "execution_count": 124,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "tuplex = (\"w\", 3, \"r\", \"e\", \"s\", \"o\", \"u\", \"r\", \"c\", \"e\")\n",
+    "list(tuplex)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f5146a3d-4c29-4d7a-ad22-3d8bcd0e122e",
+   "metadata": {},
+   "source": [
+    "8. Convert a list to a tuple. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 125,
+   "id": "5b78088b-7dfb-4b2a-bd86-1c8f507b117a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "('w', 3, 'r', 'e', 's', 'o', 'u', 'r', 'c', 'e')"
+      ]
+     },
+     "execution_count": 125,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "l=['w', 3, 'r', 'e', 's', 'o', 'u', 'r', 'c', 'e']\n",
+    "tuple(l)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d9dcdc8a-6ec0-46d2-9a6e-ee58b60b4bc1",
+   "metadata": {},
+   "source": [
+    "9. Unpack the elements of a tuple into variables. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 126,
+   "id": "9654fabd-3e1a-4724-bb37-b12f2b194925",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['aditi', 'balu', 'rahade', 'usha']\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Using * unpacking method\n",
+    "tuples = ('aditi', 'balu', 'rahade', 'usha')\n",
+    "# convert tuple into list\n",
+    "list1 = [*tuples,]\n",
+    "print(list1)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c7164019-78aa-4ae5-8859-e251b7dcdd5e",
+   "metadata": {},
+   "source": [
+    "10. Create a tuple of even numbers from 1 to 10. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 127,
+   "id": "d494205a-962a-4633-bdd3-3ad862ac403f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2 4 6 8 10 "
+     ]
+    }
+   ],
+   "source": [
+    "# tuple of numbers\n",
+    "tuple = (1,2,3,4,5,6,7,8,9,10)\n",
+    "\n",
+    "# iterating each number in tuple\n",
+    "for num in tuple:\n",
+    "\n",
+    "\t# checking condition\n",
+    "\tif num % 2 == 0:\n",
+    "\t\tprint(num, end=\" \")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e7f4b689-e754-4319-b502-b06aa02f9a5d",
+   "metadata": {},
+   "source": [
+    "11. Create a tuple of odd numbers from 1 to 10. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 128,
+   "id": "94abc426-1dca-4bca-8a0e-54179780c0e8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1 3 5 7 9 "
+     ]
+    }
+   ],
+   "source": [
+    "# tuple of numbers\n",
+    "tuple = (1,2,3,4,5,6,7,8,9,10)\n",
+    "\n",
+    "# iterating each number in tuple\n",
+    "for num in tuple:\n",
+    "\n",
+    "\t# checking condition\n",
+    "\tif num % 2 != 0:\n",
+    "\t\tprint(num, end=\" \")\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bc75ead9-a8bf-4fb0-9a2f-718dd664b56e",
+   "metadata": {},
+   "source": [
+    "12. Concatenate two tuples. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 129,
+   "id": "8b1f5491-aa38-404b-9699-1ffaeccb3c60",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 20, 30, 40, 50, 60, 70)"
+      ]
+     },
+     "execution_count": 129,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "tuple1 = (1,2,3,4,5,6,7,8,9,10)\n",
+    "tuple2 = (10,20,30,40,50,60,70)\n",
+    "tuple1+tuple2\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "04d3f9ff-bb3b-4411-8683-5c9d7b377106",
+   "metadata": {},
+   "source": [
+    "13. Repeat a tuple three times. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 130,
+   "id": "6e3bf46a-0e91-4d8d-bf15-676d1fc5e8e1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The tuple is : \n",
+      "(11, 14, 0)\n",
+      "The tuple after duplicating 3 times is\n",
+      "((11, 14, 0), (11, 14, 0), (11, 14, 0))\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_tuple_1 = (11, 14, 0)\n",
+    "\n",
+    "print(\"The tuple is : \")\n",
+    "print(my_tuple_1)\n",
+    "N = 3\n",
+    "\n",
+    "my_result = ((my_tuple_1, ) * N)\n",
+    "\n",
+    "print(\"The tuple after duplicating \"+ str(N) + \" times is\")\n",
+    "print(my_result)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "78b11f2a-cbf7-4474-bc53-1fb2c7f12530",
+   "metadata": {},
+   "source": [
+    "14. Check if a tuple is empty. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 131,
+   "id": "3f855d7b-4a0b-4937-963c-edcba2bd1379",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "A is not empty\n"
+     ]
+    }
+   ],
+   "source": [
+    "A = (1, 2, 3)\n",
+    "lenA = len(A)\n",
+    "if lenA == 0:\n",
+    "   print(\"A is empty\")\n",
+    "else:\n",
+    "   print(\"A is not empty\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7591907e-2210-4c09-9e9f-5d5b54c26509",
+   "metadata": {},
+   "source": [
+    "15. Create a nested tuple. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 132,
+   "id": "ac975c07-0978-400f-a6b9-8d9fb8961a07",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Tuple 1 : ((5, 4),)\n",
+      "Tuple 2 : ((1, 6),)\n",
+      "The nested tuple : ((5, 4), (1, 6))\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Python program to concatenate tuples to make a nested tuple  \n",
+    "  \n",
+    "# initializing the tuples  \n",
+    "tup1 = (5, 4),  \n",
+    "tup2 = (1, 6),  \n",
+    "  \n",
+    "# printing the original tuples  \n",
+    "print(\"Tuple 1 : \" + str(tup1))  \n",
+    "print(\"Tuple 2 : \" + str(tup2))  \n",
+    "  \n",
+    "# Concatenating the two tuples to a nested tuple using the + operator  \n",
+    "nested = tup1 + tup2  \n",
+    "  \n",
+    "# printing the result  \n",
+    "print(\"The nested tuple : \" + str(nested))  \n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9fab24d7-0bae-4973-91ba-8bb09fa9301d",
+   "metadata": {},
+   "source": [
+    "16. Access the first element of a nested tuple. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 135,
+   "id": "df693799-442c-42a7-8dfa-68197912b6bc",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "((1, 2), (3, 4, 5), (6, 7, 8, 9))\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_tuple = ((1, 2), (3, 4, 5), (6, 7, 8, 9))\n",
+    "element = my_tuple[1][2] \n",
+    "print(my_tuple)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8127434e-2838-4e8a-90e3-1e9b1b45664a",
+   "metadata": {},
+   "source": [
+    "17. Create a tuple with a single element.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 136,
+   "id": "759bd451-9833-420a-85e4-642698a4440e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "('apple',)\n"
+     ]
+    }
+   ],
+   "source": [
+    "thistuple = (\"apple\",)\n",
+    "print(thistuple)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c0f85766-c044-4320-8e9a-39cf2017c029",
+   "metadata": {},
+   "source": [
+    "18. Compare two tuples.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 137,
+   "id": "5ce3fc94-0eb5-4ee9-8a99-5c29e197271c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n",
+      "False\n",
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "tuple1 = (1, 2, 3)\n",
+    "tuple2 = (4, 5, 6)\n",
+    "\n",
+    "print(tuple1 < tuple2)  \n",
+    "print(tuple1 > tuple2)  \n",
+    "print(tuple1 == tuple2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bae18e86-fa84-48f6-b213-75e6b61f9fa9",
+   "metadata": {},
+   "source": [
+    "19.delete a tuple.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 143,
+   "id": "0dc9ac3a-7a53-4c30-9d1e-14493db8dc5c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "('physics', 'chemistry', 'biology')\n"
+     ]
+    }
+   ],
+   "source": [
+    "tup = ('physics', 'chemistry','biology')\n",
+    "print(tup)\n",
+    "\n",
+    "del tup\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "41f3c296-1b6c-4dac-9997-ea9c04f13a99",
+   "metadata": {},
+   "source": [
+    "20. Slice a tuple.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 144,
+   "id": "c2410dac-60d5-4791-be61-d00c3b3e57db",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "('r', 'o', 'g')\n",
+      "('p', 'r')\n",
+      "('i', 'z')\n",
+      "('p', 'r', 'o', 'g', 'r', 'a', 'm', 'i', 'z')\n"
+     ]
+    }
+   ],
+   "source": [
+    "# accessing tuple elements using slicing\n",
+    "my_tuple = ('p', 'r', 'o', 'g', 'r', 'a', 'm', 'i', 'z')\n",
+    "\n",
+    "# elements 2nd to 4th index\n",
+    "print(my_tuple[1:4])  #  prints ('r', 'o', 'g')\n",
+    "\n",
+    "# elements beginning to 2nd\n",
+    "print(my_tuple[:-7]) # prints ('p', 'r')\n",
+    "\n",
+    "# elements 8th to end\n",
+    "print(my_tuple[7:]) # prints ('i', 'z')\n",
+    "\n",
+    "# elements beginning to end\n",
+    "print(my_tuple[:]) # Prints ('p', 'r', 'o', 'g', 'r', 'a', 'm', 'i', 'z')\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ca082388-9f75-4ecf-9e43-da69a39d3693",
+   "metadata": {},
+   "source": [
+    "21. Find the maximum value in a tuple. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 145,
+   "id": "ea16087b-cf3a-4342-bd1a-142705a23508",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Maximum of Tuple is 6\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Creating tuples\n",
+    "Tuple = ( 1, 3, 4, 2, 5, 6 )\n",
+    "\n",
+    "res = max(Tuple)\n",
+    "print('Maximum of Tuple is', res)# Creating tuples\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "46b2c5fb-d24c-4b6d-949c-9f74a99b854a",
+   "metadata": {},
+   "source": [
+    "22. Find the minimum value in a tuple. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 146,
+   "id": "cd0c6871-e465-44d8-803c-5ded9b1fd8ec",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Minimum of Tuple is 1\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Creating tuples\n",
+    "Tuple = ( 1, 3, 4, 2, 5, 6 )\n",
+    "\n",
+    "res = min(Tuple)\n",
+    "print('Minimum of Tuple is', res)# Creating tuples\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8907ba53-42d2-46f6-a691-f39ffc60751b",
+   "metadata": {},
+   "source": [
+    "23. Convert a string to a tuple of character\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 147,
+   "id": "e26e14cb-a84e-470a-98db-d2124f389591",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Input string : python\n",
+      "Output tuple: ('python',)\n"
+     ]
+    }
+   ],
+   "source": [
+    "s = \"python\"\n",
+    "print(\"Input string :\", s)\n",
+    "\n",
+    "t = s,\n",
+    "print('Output tuple:', t)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0f9436db-defa-4c7f-a533-dc6dce150766",
+   "metadata": {},
+   "source": [
+    "24. Convert a tuple of characters to a string.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 148,
+   "id": "799e61de-3cb4-4827-ba02-0b32a9e0d668",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Input tuple : ('python', 'java', 'php', 'javascript')\n",
+      "Output string: (('python', 'java', 'php', 'javascript'),)\n"
+     ]
+    }
+   ],
+   "source": [
+    "t = (\"python\",\"java\",\"php\",\"javascript\")\n",
+    "print(\"Input tuple :\", t)\n",
+    "\n",
+    "s = t,\n",
+    "print('Output string:', s)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4159e857-cb6d-4357-b3e8-86f565a01765",
+   "metadata": {},
+   "source": [
+    "25. Create a tuple from multiple data types. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 149,
+   "id": "3a020e5f-e090-4b48-8eec-a377a5fc4b7e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "('python', 45, 1.55, True)\n"
+     ]
+    }
+   ],
+   "source": [
+    "t = (\"python\",45,1.55,True)\n",
+    "print(t)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3da1f13b-73c6-439b-a89b-3d69cb7fa4f3",
+   "metadata": {},
+   "source": [
+    "26. Check if two tuples are identical. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 150,
+   "id": "f5182831-5ae3-4829-ac2d-48057aa8e69c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The first list of tuple is : \n",
+      "[(11, 14), (54, 58)]\n",
+      "The second list of tuple is : \n",
+      "[(98, 0), (10, 13)]\n",
+      "Are the list of tuples identical?\n",
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_list_1 = [(11, 14), (54, 58)]\n",
+    "my_list_2 = [(98, 0), (10, 13)]\n",
+    "\n",
+    "print(\"The first list of tuple is : \")\n",
+    "print(my_list_1)\n",
+    "print(\"The second list of tuple is : \")\n",
+    "print(my_list_2)\n",
+    "\n",
+    "my_result = my_list_1 == my_list_2\n",
+    "\n",
+    "print(\"Are the list of tuples identical?\")\n",
+    "print(my_result)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6fe5f0dc-5a5f-4c62-a7e6-0bef3d9b513e",
+   "metadata": {},
+   "source": [
+    "27. Sort the elements of a tuple. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 151,
+   "id": "1c31b384-f5ad-42c2-9192-0260cbbab001",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The original list is : [(4, 5, 1), (6, 1, 5), (7, 4, 2), (6, 2, 4)]\n",
+      "List after sorting tuple by index sort : [(6, 1, 5), (6, 2, 4), (7, 4, 2), (4, 5, 1)]\n"
+     ]
+    }
+   ],
+   "source": [
+    "test_list = [(4, 5, 1), (6, 1, 5), (7, 4, 2), (6, 2, 4)]\n",
+    "\n",
+    "# printing original list\n",
+    "print(\"The original list is : \" + str(test_list))\n",
+    "\n",
+    "# index according to which sort to perform\n",
+    "N = 1\n",
+    "\n",
+    "# Sort tuple list by element of tuple\n",
+    "# using sort() + lambda\n",
+    "test_list.sort(key = lambda x: x[N])\n",
+    "\n",
+    "# printing result\n",
+    "print(\"List after sorting tuple by index sort : \" + str(test_list))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c7e866f1-0382-4ccd-a66c-e6245b9f9fb5",
+   "metadata": {},
+   "source": [
+    "28. Convert a tuple of integers to a tuple of strings. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 153,
+   "id": "6252b569-f108-45b8-b8d0-5d0c0cb71790",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "aditi\n"
+     ]
+    }
+   ],
+   "source": [
+    "def convertTuple(tup):\n",
+    "\t\t# initialize an empty string\n",
+    "\tstr = ''\n",
+    "\tfor item in tup:\n",
+    "\t\tstr = str + item\n",
+    "\treturn str\n",
+    "\n",
+    "# Driver code\n",
+    "tuple = ('a', 'd', 'i', 't', 'i')\n",
+    "str = convertTuple(tuple)\n",
+    "print(str)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3881034d-2716-49be-8502-3f9d69cc3c33",
+   "metadata": {},
+   "source": [
+    "29. Convert a tuple of strings to a tuple of integers. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 155,
+   "id": "c918a513-22a0-4caf-a8ce-709152067e7d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The original string is : (7, 8, 9)\n"
+     ]
+    },
+    {
+     "ename": "TypeError",
+     "evalue": "'tuple' object is not callable",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[155], line 9\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mThe original string is : \u001b[39m\u001b[38;5;124m\"\u001b[39m \u001b[38;5;241m+\u001b[39m test_str)\n\u001b[1;32m      7\u001b[0m \u001b[38;5;66;03m# Convert Tuple String to Integer Tuple\u001b[39;00m\n\u001b[1;32m      8\u001b[0m \u001b[38;5;66;03m# Using tuple() + int() + replace() + split()\u001b[39;00m\n\u001b[0;32m----> 9\u001b[0m res \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mtuple\u001b[39;49m\u001b[43m(\u001b[49m\u001b[38;5;28;43mint\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43mnum\u001b[49m\u001b[43m)\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;28;43;01mfor\u001b[39;49;00m\u001b[43m \u001b[49m\u001b[43mnum\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;129;43;01min\u001b[39;49;00m\u001b[43m \u001b[49m\u001b[43mtest_str\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mreplace\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43m(\u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[43m)\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mreplace\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43m)\u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[43m)\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mreplace\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43m...\u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[43m)\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43msplit\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43m, \u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[43m)\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m     11\u001b[0m \u001b[38;5;66;03m# printing result\u001b[39;00m\n\u001b[1;32m     12\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mThe tuple after conversion is : \u001b[39m\u001b[38;5;124m\"\u001b[39m \u001b[38;5;241m+\u001b[39m \u001b[38;5;28mstr\u001b[39m(res))\n",
+      "\u001b[0;31mTypeError\u001b[0m: 'tuple' object is not callable"
+     ]
+    }
+   ],
+   "source": [
+    "# initializing string\n",
+    "test_str = \"(7, 8, 9)\"\n",
+    "\n",
+    "# printing original string\n",
+    "print(\"The original string is : \" + test_str)\n",
+    "\n",
+    "# Convert Tuple String to Integer Tuple\n",
+    "# Using tuple() + int() + replace() + split()\n",
+    "res = tuple(int(num) for num in test_str.replace('(', '').replace(')', '').replace('...', '').split(', '))\n",
+    "\n",
+    "# printing result\n",
+    "print(\"The tuple after conversion is : \" + str(res))\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "08678a02-4f6d-46d2-b175-917945c8b731",
+   "metadata": {},
+   "source": [
+    "30. Merge two tuples.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 156,
+   "id": "6dbc0664-9d2c-4547-92c3-029020fd4ec6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The first tuple, A :  (1, 2, 3)\n",
+      "The second tuple, B :  ('a', 'b', 'c')\n",
+      "The resulting tuple is, C :  (1, 2, 3, 'a', 'b', 'c')\n"
+     ]
+    }
+   ],
+   "source": [
+    "A = (1, 2, 3)\n",
+    "B = ('a', 'b', 'c')\n",
+    "print(\"The first tuple, A : \", A)\n",
+    "print(\"The second tuple, B : \", B)\n",
+    "C = A + B\n",
+    "print(\"The resulting tuple is, C : \", C)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "dc644415-fcaf-4c31-befb-17773df978ce",
+   "metadata": {},
+   "source": [
+    "31. Flatten a nested tuple.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 157,
+   "id": "2807ea10-7eaf-44dc-8155-579277a03bdc",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Original list: [('a', 'b', 'c'), ('d', 'e', 'f'), ('g', 'h', 'i')]\n",
+      "Flattened list: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']\n"
+     ]
+    }
+   ],
+   "source": [
+    "# list of tuples\n",
+    "ls = [('a','b','c'),('d','e','f'),('g','h','i')]\n",
+    " \n",
+    "# iterate through list of tuples in a nested loop\n",
+    "flat_ls = []\n",
+    "for tup in ls:\n",
+    "    for item in tup:\n",
+    "        flat_ls.append(item)\n",
+    "\n",
+    "# display the lists\n",
+    "print(\"Original list:\", ls)\n",
+    "print(\"Flattened list:\", flat_ls)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b85fca7e-274d-44bb-bc8e-0123686b004f",
+   "metadata": {},
+   "source": [
+    "32. Create a tuple of the first 5 prime numbers.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 158,
+   "id": "68d7fe5f-0eda-4b3b-b5b2-544d503e9549",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[(1, 1), (2, 8), (5, 125), (6, 216)]\n"
+     ]
+    }
+   ],
+   "source": [
+    "list1 = [1, 2, 5, 6]\n",
+    "\n",
+    "res = [(val, pow(val, 3)) for val in list1]\n",
+    "\n",
+    "# print the result\n",
+    "print(res)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "90e7fb87-cfa1-48cf-958a-35db62c32294",
+   "metadata": {},
+   "source": [
+    "33. Check if a tuple is a palindrome# function which return reverse of a tuple\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 159,
+   "id": "d2496083-3ff6-455f-aeaf-c6aa219d6fb3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "No\n"
+     ]
+    }
+   ],
+   "source": [
+    "def isPalindrome(t):\n",
+    "\treturn t == t[::-1]\n",
+    "\n",
+    "\n",
+    "# Driver code\n",
+    "t = (10,20,30,40,50,60,70,80,90)\n",
+    "ans = isPalindrome(t)\n",
+    "\n",
+    "if ans:\n",
+    "\tprint(\"Yes\")\n",
+    "else:\n",
+    "\tprint(\"No\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0d88e675-cd8c-40fa-8ffe-938d191a44d0",
+   "metadata": {},
+   "source": [
+    "34. Create a tuple of squares of numbers from 1 to 5. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 160,
+   "id": "dae16b55-18ad-4efc-839a-fda3507cffe7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The square of integers from 1 to 50 is: (1, 4, 9, 16, 25)\n"
+     ]
+    }
+   ],
+   "source": [
+    "tup = ()\n",
+    "for i in range(1,6):\n",
+    "    tup = tup + (i**2,)\n",
+    "print(\"The square of integers from 1 to 50 is:\" ,tup)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "22a89d4a-e1d2-43da-944a-02fedd8fdac8",
+   "metadata": {},
+   "source": [
+    "35. Filter out all even numbers from a tuple. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 161,
+   "id": "6076d9a1-d58f-4d17-9a8f-c4eed0fa053f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "After Filteration of all the tuple: [(2, 4)]\n"
+     ]
+    }
+   ],
+   "source": [
+    "tuple_list = [(61, 14, 12, 18), (52, 61, 73, 69), (80, 111, 211),(2,4)]\n",
+    "result = [tup for tup in tuple_list if all(ele % 2 == 0 for ele in tup)]\n",
+    "print(\"After Filteration of all the tuple:\",result)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b19d12d7-1d88-4d48-98c9-e84097916cb8",
+   "metadata": {},
+   "source": [
+    "36. Multiply all elements in a tuple by 2.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 162,
+   "id": "06e2533b-042f-4cf5-bc78-da7e88e36f32",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(10, 46, 45, 67, 89, 100, 10, 46, 45, 67, 89, 100)"
+      ]
+     },
+     "execution_count": 162,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "t=(10,46,45,67,89,100)\n",
+    "t*2\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "27ab8312-9a29-456a-92e7-7453471251a9",
+   "metadata": {},
+   "source": [
+    "37. Create a tuple of random numbers. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 163,
+   "id": "32a8c346-694c-4afb-bf6c-b742402b35b6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "46\n"
+     ]
+    }
+   ],
+   "source": [
+    "import random\n",
+    "x = random.randint(0,50)\n",
+    "print(x)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8d5c65f7-d72c-46ca-afd6-6df963f62fdc",
+   "metadata": {},
+   "source": [
+    "38. Check if a tuple is sorted. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 165,
+   "id": "547deb14-ff1f-447a-8cc6-cc1cee477602",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "('Itika', 'Arshia', 'Peter', 'Parker')\n",
+      "<class 'tuple'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "tuple_ = ('Itika', 'Arshia', 'Peter', 'Parker')  \n",
+    "list(tuple_).sort()   \n",
+    "print(tuple_)  \n",
+    "print(type(tuple_))  \n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c80d5d18-4640-4d97-90d8-92ffcffdb8d3",
+   "metadata": {},
+   "source": [
+    "39. Rotate a tuple to the left by `n` positions. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 166,
+   "id": "1e65ecf1-4e79-4a4e-b6ff-7fea83e7b3b7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter Position to Left Rotate tuple Items =  60\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Original tuple Items Before Left Rotating\n",
+      "(5, 10, 15, 20, 25, 30, 35, 40, 45, 50)\n",
+      "\n",
+      "Final tuple Items After Left Rotating\n",
+      "(5, 10, 15, 20, 25, 30, 35, 40, 45, 50)\n"
+     ]
+    }
+   ],
+   "source": [
+    "tuple = (5, 10, 15, 20, 25, 30, 35, 40, 45, 50)\n",
+    "\n",
+    "ltRotate = int(input(\"Enter Position to Left Rotate tuple Items = \"))\n",
+    "\n",
+    "print('Original tuple Items Before Left Rotating')\n",
+    "print(tuple)\n",
+    "\n",
+    "tuple2 = tuple[ltRotate:] + tuple[:ltRotate]\n",
+    "\n",
+    "print('\\nFinal tuple Items After Left Rotating')\n",
+    "print(tuple2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8ce1020d-de80-402a-a848-c06fb4818ca0",
+   "metadata": {},
+   "source": [
+    "40 Rotate a tuple to the right by `n` positions. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 167,
+   "id": "a273a671-8390-4153-903f-c80a04384706",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter Position to right Rotate tuple Items =  40\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Original tuple Items Before right Rotating\n",
+      "(5, 10, 15, 20, 25, 30, 35, 40, 45, 50)\n",
+      "\n",
+      "Final tuple Items After right Rotating\n",
+      "(5, 10, 15, 20, 25, 30, 35, 40, 45, 50)\n"
+     ]
+    }
+   ],
+   "source": [
+    "tuple = (5, 10, 15, 20, 25, 30, 35, 40, 45, 50)\n",
+    "\n",
+    "rtRotate = int(input(\"Enter Position to right Rotate tuple Items = \"))\n",
+    "\n",
+    "print('Original tuple Items Before right Rotating')\n",
+    "print(tuple)\n",
+    "\n",
+    "tuple2 = tuple[rtRotate:] + tuple[:rtRotate]\n",
+    "\n",
+    "print('\\nFinal tuple Items After right Rotating')\n",
+    "print(tuple2)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3aeb64ef-325d-4ae8-873e-f84cbfff693e",
+   "metadata": {},
+   "source": [
+    "41. Create a tuple of the first 5 Fibonacci numbers. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 168,
+   "id": "4afbbcab-121f-4c76-ba00-139c964d83e4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1 2 3 5 8 \n"
+     ]
+    }
+   ],
+   "source": [
+    "n = 5\n",
+    "num1 = 0\n",
+    "num2 = 1\n",
+    "next_number = num2\n",
+    "count = 1\n",
+    "\n",
+    "while count <= n:\n",
+    "\tprint(next_number, end=\" \")\n",
+    "\tcount += 1\n",
+    "\tnum1, num2 = num2, next_number\n",
+    "\tnext_number = num1 + num2\n",
+    "print()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f1f90873-28ed-47a2-b8e2-0539407227f7",
+   "metadata": {},
+   "source": [
+    "42. Create a tuple from user input\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 169,
+   "id": "cc215a2c-e6d2-4b38-82f8-75f9111bbacc",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "some text :  adi\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "adi\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "(1, 1)"
+      ]
+     },
+     "execution_count": 169,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a=input ('some text : ')  # value entered is 1,1\n",
+    "print (a)\n",
+    "1,1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "719c6a4d-64c1-4fea-9fad-c4c6f8366a90",
+   "metadata": {},
+   "source": [
+    "43. Swap two elements in a tuple. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 170,
+   "id": "752ee150-05c1-47cb-93ea-2f1bade432ed",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "'str' object is not callable",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[170], line 4\u001b[0m\n\u001b[1;32m      1\u001b[0m test_list \u001b[38;5;241m=\u001b[39m [(\u001b[38;5;241m3\u001b[39m, \u001b[38;5;241m4\u001b[39m), (\u001b[38;5;241m6\u001b[39m, \u001b[38;5;241m5\u001b[39m), (\u001b[38;5;241m7\u001b[39m, \u001b[38;5;241m8\u001b[39m)]\n\u001b[1;32m      3\u001b[0m \u001b[38;5;66;03m# printing original list\u001b[39;00m\n\u001b[0;32m----> 4\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mThe original list is : \u001b[39m\u001b[38;5;124m\"\u001b[39m \u001b[38;5;241m+\u001b[39m \u001b[38;5;28;43mstr\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43mtest_list\u001b[49m\u001b[43m)\u001b[49m)\n\u001b[1;32m      6\u001b[0m \u001b[38;5;66;03m# Swap tuple elements in list of tuples\u001b[39;00m\n\u001b[1;32m      7\u001b[0m \u001b[38;5;66;03m# Using list comprehension\u001b[39;00m\n\u001b[1;32m      8\u001b[0m res \u001b[38;5;241m=\u001b[39m [(sub[\u001b[38;5;241m1\u001b[39m], sub[\u001b[38;5;241m0\u001b[39m]) \u001b[38;5;28;01mfor\u001b[39;00m sub \u001b[38;5;129;01min\u001b[39;00m test_list]\n",
+      "\u001b[0;31mTypeError\u001b[0m: 'str' object is not callable"
+     ]
+    }
+   ],
+   "source": [
+    "test_list = [(3, 4), (6, 5), (7, 8)]\n",
+    "\n",
+    "# printing original list\n",
+    "print(\"The original list is : \" + str(test_list))\n",
+    "\n",
+    "# Swap tuple elements in list of tuples\n",
+    "# Using list comprehension\n",
+    "res = [(sub[1], sub[0]) for sub in test_list]\n",
+    "\t\t\n",
+    "# printing result\n",
+    "print(\"The swapped tuple list is : \" + str(res))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d5d98f2b-cd91-42b8-b572-fd62df0df40e",
+   "metadata": {},
+   "source": [
+    "44. Reverse the elements of a tuple. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 171,
+   "id": "7c7beeae-fd6a-4e0b-a94f-b36e5d3d83db",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "('k', 'e', 'e', 'g', 'f', 'd', 'a', 'z')\n"
+     ]
+    }
+   ],
+   "source": [
+    "def Reverse(tuples):\n",
+    "\tnew_tup = tuples[::-1]\n",
+    "\treturn new_tup\n",
+    "\t\n",
+    "# Driver Code\n",
+    "tuples = ('z','a','d','f','g','e','e','k')\n",
+    "print(Reverse(tuples))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3c08414f-8dd0-4929-9958-6896bb15a88f",
+   "metadata": {},
+   "source": [
+    "45. Create a tuple of the first `n` powers of 2. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 175,
+   "id": "4699339a-41b8-4fe9-ad6c-ad717866dc8b",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "'tuple' object is not callable",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[175], line 5\u001b[0m\n\u001b[1;32m      1\u001b[0m terms \u001b[38;5;241m=\u001b[39m \u001b[38;5;241m10\u001b[39m\n\u001b[1;32m      4\u001b[0m \u001b[38;5;66;03m# use anonymous function\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m result \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mtuple\u001b[39;49m\u001b[43m(\u001b[49m\u001b[38;5;28;43mmap\u001b[39;49m\u001b[43m(\u001b[49m\u001b[38;5;28;43;01mlambda\u001b[39;49;00m\u001b[43m \u001b[49m\u001b[43mx\u001b[49m\u001b[43m:\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;241;43m2\u001b[39;49m\u001b[43m \u001b[49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[43m \u001b[49m\u001b[43mx\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;28;43mrange\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43mterms\u001b[49m\u001b[43m)\u001b[49m\u001b[43m)\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m      7\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mThe total terms are:\u001b[39m\u001b[38;5;124m\"\u001b[39m,terms)\n\u001b[1;32m      8\u001b[0m \u001b[38;5;28;01mfor\u001b[39;00m i \u001b[38;5;129;01min\u001b[39;00m \u001b[38;5;28mrange\u001b[39m(terms):\n",
+      "\u001b[0;31mTypeError\u001b[0m: 'tuple' object is not callable"
+     ]
+    }
+   ],
+   "source": [
+    "terms = 10\n",
+    "\n",
+    "\n",
+    "# use anonymous function\n",
+    "result = tuple(map(lambda x: 2 ** x, range(terms)))\n",
+    "\n",
+    "print(\"The total terms are:\",terms)\n",
+    "for i in range(terms):\n",
+    "   print(\"2 raised to power\",i,\"is\",result[i])\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "75db0929-4467-4514-b3e8-b8a447964091",
+   "metadata": {},
+   "source": [
+    "46. Find the longest string in a tuple of strings.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 183,
+   "id": "b959e13d-d2bb-4eda-ad8a-294bd5a15dd6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "banana\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = ('apple', 'banana', 'fig', 'mango')\n",
+    "longest = max(x, key=len)\n",
+    "print(longest)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b57e3835-70af-4703-9f67-8c6d720c872a",
+   "metadata": {},
+   "source": [
+    "47. Find the shortest string in a tuple of strings. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 182,
+   "id": "b81afb48-67a3-490f-a5f6-10191535541a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "fig\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = ('apple', 'banana', 'fig', 'mango')\n",
+    "shortest = min(x, key=len)\n",
+    "print(shortest)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cdb51874-498f-4a9f-a6a4-0415956c885d",
+   "metadata": {},
+   "source": [
+    "48. Create a tuple of the first `n` triangular numbers. \n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 184,
+   "id": "47dcdcc2-2d6b-4e45-834f-b62c54480583",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1 3 6 10 15 "
+     ]
+    }
+   ],
+   "source": [
+    "def triangular_series( n ):\n",
+    "\tj = 1\n",
+    "\tk = 1\n",
+    "\t\n",
+    "\t# For each iteration increase j\n",
+    "\t# by 1 and add it into k\n",
+    "\tfor i in range(1, n + 1):\n",
+    "\t\tprint(k, end = ' ')\n",
+    "\t\tj = j + 1 # Increasing j by 1\n",
+    "\t\t\n",
+    "\t\t# Add value of j into k and update k\n",
+    "\t\tk = k + j\n",
+    "\t\t\n",
+    "# Driven Code\n",
+    "n = 5\n",
+    "triangular_series(n)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "44a5f023-ba74-45c5-bc02-a9335a23378c",
+   "metadata": {},
+   "source": [
+    "49. Check if a tuple contains another tuple as a subsequence. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 185,
+   "id": "1346574d-378b-4c56-aa6a-1f24883c0ea6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The first tuple is :\n",
+      "(87, 90, 31, 85)\n",
+      "The second tuple is :\n",
+      "(34, 56, 12, 5)\n",
+      "Is the second tuple a subset of the first tuple ? \n",
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_tuple_1 = (87, 90, 31, 85)\n",
+    "my_tuple_2 = (34, 56, 12, 5)\n",
+    "\n",
+    "print(\"The first tuple is :\")\n",
+    "print(my_tuple_1)\n",
+    "print(\"The second tuple is :\")\n",
+    "print(my_tuple_2)\n",
+    "\n",
+    "my_result = set(my_tuple_2).issubset(my_tuple_1)\n",
+    "\n",
+    "print(\"Is the second tuple a subset of the first tuple ? \")\n",
+    "print(my_result)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5bafbe46-6036-4104-b942-8c4379075be8",
+   "metadata": {},
+   "source": [
+    "50. Create a tuple of alternating 1s and 0s of length `n`.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 186,
+   "id": "5a7194a6-b090-426b-8410-209f9804d158",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "'str' object is not callable",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[186], line 4\u001b[0m\n\u001b[1;32m      1\u001b[0m test_tuple \u001b[38;5;241m=\u001b[39m (\u001b[38;5;241m5\u001b[39m, \u001b[38;5;241m6\u001b[39m, \u001b[38;5;241m3\u001b[39m, \u001b[38;5;241m6\u001b[39m, \u001b[38;5;241m10\u001b[39m, \u001b[38;5;241m34\u001b[39m)\n\u001b[1;32m      3\u001b[0m \u001b[38;5;66;03m# printing original tuple\u001b[39;00m\n\u001b[0;32m----> 4\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mThe original tuple : \u001b[39m\u001b[38;5;124m\"\u001b[39m \u001b[38;5;241m+\u001b[39m \u001b[38;5;28;43mstr\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43mtest_tuple\u001b[49m\u001b[43m)\u001b[49m)\n\u001b[1;32m      6\u001b[0m \u001b[38;5;66;03m# Alternate Elements operation on Tuple\u001b[39;00m\n\u001b[1;32m      7\u001b[0m \u001b[38;5;66;03m# Using loop + enumerate()\u001b[39;00m\n\u001b[1;32m      8\u001b[0m sum0 \u001b[38;5;241m=\u001b[39m \u001b[38;5;241m0\u001b[39m\n",
+      "\u001b[0;31mTypeError\u001b[0m: 'str' object is not callable"
+     ]
+    }
+   ],
+   "source": [
+    "test_tuple = (5, 6, 3, 6, 10, 34)\n",
+    "\n",
+    "# printing original tuple\n",
+    "print(\"The original tuple : \" + str(test_tuple))\n",
+    "\n",
+    "# Alternate Elements operation on Tuple\n",
+    "# Using loop + enumerate()\n",
+    "sum0 = 0\n",
+    "sum1 = 0\n",
+    "for idx, ele in enumerate(test_tuple):\n",
+    "\tif idx % 2:\n",
+    "\t\tsum0 += ele\n",
+    "\telse:\n",
+    "\t\tsum1 += ele\n",
+    "\n",
+    "# printing result\n",
+    "print(\"The alternate chain sum 0 : \" + str(sum1))\n",
+    "print(\"The alternate chain sum 1 : \" + str(sum2))\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b2a65220-c9fc-400e-a195-087675546013",
+   "metadata": {},
+   "source": [
+    "Set Based Practice Problem :\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "793ce405-0eb7-4d10-84e0-2fc9c0b859b8",
+   "metadata": {},
+   "source": [
+    "1. Create a set with integers from 1 to 5. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 187,
+   "id": "7b8ee2c7-f2a5-4b86-83d1-e8517689526d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{1, 2, 3, 4, 5}\n"
+     ]
+    }
+   ],
+   "source": [
+    "s={1,2,3,4,5}\n",
+    "print(s)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "194beed8-8907-4015-af89-6f892e1838aa",
+   "metadata": {},
+   "source": [
+    "2. Add an element to a set. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 188,
+   "id": "f639a706-54b1-4038-be27-4131b7003693",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'banana', 'orange', 'cherry', 'apple'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "thisset = {\"apple\", \"banana\", \"cherry\"}\n",
+    "\n",
+    "thisset.add(\"orange\")\n",
+    "\n",
+    "print(thisset)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3323f8f6-8580-4ac4-926e-43c39358766b",
+   "metadata": {},
+   "source": [
+    "3. Remove an element from a set. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 189,
+   "id": "56012e15-f261-45ea-81d8-579458073606",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'banana', 'cherry'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "thisset = {\"apple\", \"banana\", \"cherry\"}\n",
+    "\n",
+    "thisset.remove(\"apple\")\n",
+    "\n",
+    "print(thisset)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4c51887f-c62a-4656-b006-0cebc1056b60",
+   "metadata": {},
+   "source": [
+    "4. Check if an element exists in a set. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 190,
+   "id": "c5a59283-b4ea-44ab-99c7-fa8d8eaf6251",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3 is present in s\n"
+     ]
+    }
+   ],
+   "source": [
+    "s={1,2,3,4,5}\n",
+    "if 3 in s:\n",
+    "    print(\"3 is present in s\")\n",
+    "else:\n",
+    "    print(\"3 is not present in s\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "35847852-ad20-4313-9284-d57e48252ae9",
+   "metadata": {},
+   "source": [
+    "5. Find the length of a set without using the `len()` function.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 191,
+   "id": "31934661-4820-42c3-81ac-f86b25ca37ac",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3\n"
+     ]
+    }
+   ],
+   "source": [
+    "#take user input\n",
+    "set = {'Hello','aditi','vishal'}\n",
+    "\n",
+    "count = 0\n",
+    "\n",
+    "for i in set:\n",
+    " \n",
+    "    count+=1\n",
+    "print(count)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1747d4f2-0823-47f1-8d94-4c80a73b55cc",
+   "metadata": {},
+   "source": [
+    "6.clear the elements in set.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 192,
+   "id": "8a7b8a79-eb4c-4ee9-b9e8-88c5b8848e71",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "set()\n"
+     ]
+    }
+   ],
+   "source": [
+    "#take user input\n",
+    "s = {1,2,3,4,5,6,7,8,9,10}\n",
+    "s.clear()\n",
+    "print(s)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "462372b7-338e-4cef-b012-37a14aee2b50",
+   "metadata": {},
+   "source": [
+    "7. Create a set of even numbers from 1 to 10.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 193,
+   "id": "0a26b3e1-a87c-4e54-8523-c41bb5d38bac",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2 4 6 8 10 "
+     ]
+    }
+   ],
+   "source": [
+    "set1 = {1,2,3,4,5,6,7,8,9,10}\n",
+    "\n",
+    "# iterating each number in set\n",
+    "for num in set1:\n",
+    "\n",
+    "\t# checking condition\n",
+    "\tif num % 2 == 0:\n",
+    "\t\tprint(num, end=\" \")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8d9169a7-8655-49c7-b39e-2e223b1ea5d1",
+   "metadata": {},
+   "source": [
+    "8. Create a set of odd numbers from 1 to 10. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 194,
+   "id": "15c89151-1a2b-4e98-babb-7e84183d0ecd",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1 3 5 7 9 "
+     ]
+    }
+   ],
+   "source": [
+    "set1 = {1,2,3,4,5,6,7,8,9,10}\n",
+    "\n",
+    "# iterating each number in set\n",
+    "for num in set1:\n",
+    "\n",
+    "\t# checking condition\n",
+    "\tif num % 2 != 0:\n",
+    "\t\tprint(num, end=\" \")\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ed2c2b09-3b91-4543-905b-48f7c4903de0",
+   "metadata": {},
+   "source": [
+    "9. Find the union of two sets. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 195,
+   "id": "b75cc9cd-cf55-4ea4-b454-2a5320c20abb",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{1, 5, 7, 8, 23, 45}"
+      ]
+     },
+     "execution_count": 195,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s1={1,23,45}\n",
+    "s2={5,7,8}\n",
+    "s1.union(s2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "18f54971-8865-4d00-85a7-46ad5cf27b0b",
+   "metadata": {},
+   "source": [
+    "10. Find the intersection of two sets. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 196,
+   "id": "59e83bb2-54ac-4257-bf20-35c5eb31398a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{3, 4, 6, 78, 89}\n"
+     ]
+    }
+   ],
+   "source": [
+    "s1 = {4,89,70,56,23,45,56,3,6,78}\n",
+    "s2 = {3,4,5,6,78,89}\n",
+    "\n",
+    "s = s1.intersection(s2)\n",
+    "\n",
+    "print(s)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "589321e6-9adc-48e2-badf-83cc33296098",
+   "metadata": {},
+   "source": [
+    "11. Find the difference between two sets. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 197,
+   "id": "20e1e848-a808-4ab2-821d-eb7cc9b6adac",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{56, 45, 70, 23}\n"
+     ]
+    }
+   ],
+   "source": [
+    "s1 = {4,89,70,56,23,45,56,3,6,78}\n",
+    "s2 = {3,4,5,6,78,89}\n",
+    "\n",
+    "s = s1.difference(s2)\n",
+    "\n",
+    "print(s)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b3a8ab4a-b42b-4f74-b267-e9354e6afb01",
+   "metadata": {},
+   "source": [
+    "12. Check if a set is a subset of another set. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 200,
+   "id": "1e8d0bd9-0fed-4985-85a2-1281e1f3af84",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "A = {1, 2, 3}\n",
+    "B = {1, 2, 3, 4, 5}\n",
+    "\n",
+    "# all items of A are present in B\n",
+    "print(A.issubset(B))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a1015ceb-1c28-445a-a7ce-730a02b173f4",
+   "metadata": {},
+   "source": [
+    "13. Check if a set is a superset of another set.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 203,
+   "id": "bb027320-40b0-45d2-be99-37a1bb635d29",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "A = {1, 2, 3}\n",
+    "B = {1, 2, 3, 4, 5}\n",
+    "\n",
+    "# all items of A are present in B\n",
+    "print(A.issuperset(B))\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d7a58c3b-788f-49ba-8cc4-07e059a43b81",
+   "metadata": {},
+   "source": [
+    "14. Create a set from a list. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 205,
+   "id": "20630e31-fb60-4f41-8fe7-889cca7bb478",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "'set' object is not callable",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[205], line 3\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[38;5;66;03m# Initialize the list & set\u001b[39;00m\n\u001b[1;32m      2\u001b[0m lists \u001b[38;5;241m=\u001b[39m [\u001b[38;5;241m5\u001b[39m, \u001b[38;5;241m2\u001b[39m, \u001b[38;5;241m3\u001b[39m, \u001b[38;5;241m4\u001b[39m, \u001b[38;5;241m3\u001b[39m, \u001b[38;5;241m5\u001b[39m, \u001b[38;5;241m4\u001b[39m, \u001b[38;5;241m6\u001b[39m]\n\u001b[0;32m----> 3\u001b[0m myset \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mset\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m      4\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mList:\u001b[39m\u001b[38;5;124m\"\u001b[39m, lists)\n\u001b[1;32m      6\u001b[0m \u001b[38;5;66;03m# Convert list to set \u001b[39;00m\n\u001b[1;32m      7\u001b[0m \u001b[38;5;66;03m# Using for loop\u001b[39;00m\n",
+      "\u001b[0;31mTypeError\u001b[0m: 'set' object is not callable"
+     ]
+    }
+   ],
+   "source": [
+    "# Initialize the list & set\n",
+    "lists = [5, 2, 3, 4, 3, 5, 4, 6]\n",
+    "myset = set()\n",
+    "print(\"List:\", lists)\n",
+    "\n",
+    "# Convert list to set \n",
+    "# Using for loop\n",
+    "for item in lists:\n",
+    "    myset.add(item)\n",
+    "print(\"set:\", myset)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6a317558-5dd7-48cc-8187-0d9bbb459a7d",
+   "metadata": {},
+   "source": [
+    "15. Convert a set to a list\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 206,
+   "id": "e08373a6-df21-4828-bbec-5d8ad6a4113b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['for', 'geeks', 'Geeks']\n"
+     ]
+    }
+   ],
+   "source": [
+    "# set into a list\n",
+    "my_set = {'Geeks', 'for', 'geeks'}\n",
+    "\n",
+    "\n",
+    "s = list(my_set)\n",
+    "print(s)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "158364c1-a0bc-4b41-9030-6ac0d1aed385",
+   "metadata": {},
+   "source": [
+    "17. Pop an element from a set. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 207,
+   "id": "6623b0aa-7c2e-49b8-b962-abc02178f224",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{9, 1}\n"
+     ]
+    }
+   ],
+   "source": [
+    "s1 = {9, 1, 0}\n",
+    "s1.pop()\n",
+    "print(s1)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6429c7dc-5118-4f2c-8fca-acca72987405",
+   "metadata": {},
+   "source": [
+    "18. Check if two sets have no elements in common.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 208,
+   "id": "5ce54ff2-193f-47d3-bc61-20eff5e62b1e",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "'set' object is not callable",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[208], line 13\u001b[0m\n\u001b[1;32m     11\u001b[0m a \u001b[38;5;241m=\u001b[39m [\u001b[38;5;241m1\u001b[39m, \u001b[38;5;241m2\u001b[39m, \u001b[38;5;241m3\u001b[39m, \u001b[38;5;241m4\u001b[39m, \u001b[38;5;241m5\u001b[39m]\n\u001b[1;32m     12\u001b[0m b \u001b[38;5;241m=\u001b[39m [\u001b[38;5;241m5\u001b[39m, \u001b[38;5;241m6\u001b[39m, \u001b[38;5;241m7\u001b[39m, \u001b[38;5;241m8\u001b[39m, \u001b[38;5;241m9\u001b[39m]\n\u001b[0;32m---> 13\u001b[0m \u001b[43mcommon_member\u001b[49m\u001b[43m(\u001b[49m\u001b[43ma\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mb\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m     15\u001b[0m a \u001b[38;5;241m=\u001b[39m [\u001b[38;5;241m1\u001b[39m, \u001b[38;5;241m2\u001b[39m, \u001b[38;5;241m3\u001b[39m, \u001b[38;5;241m4\u001b[39m, \u001b[38;5;241m5\u001b[39m]\n\u001b[1;32m     16\u001b[0m b \u001b[38;5;241m=\u001b[39m [\u001b[38;5;241m6\u001b[39m, \u001b[38;5;241m7\u001b[39m, \u001b[38;5;241m8\u001b[39m, \u001b[38;5;241m9\u001b[39m]\n",
+      "Cell \u001b[0;32mIn[208], line 2\u001b[0m, in \u001b[0;36mcommon_member\u001b[0;34m(a, b)\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mcommon_member\u001b[39m(a, b):\n\u001b[0;32m----> 2\u001b[0m \ta_set \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mset\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43ma\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m      3\u001b[0m \tb_set \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mset\u001b[39m(b)\n\u001b[1;32m      5\u001b[0m \t\u001b[38;5;28;01mif\u001b[39;00m (a_set \u001b[38;5;241m&\u001b[39m b_set):\n",
+      "\u001b[0;31mTypeError\u001b[0m: 'set' object is not callable"
+     ]
+    }
+   ],
+   "source": [
+    "def common_member(a, b):\n",
+    "\ta_set = set(a)\n",
+    "\tb_set = set(b)\n",
+    "\n",
+    "\tif (a_set & b_set):\n",
+    "\t\tprint(a_set & b_set)\n",
+    "\telse:\n",
+    "\t\tprint(\"No common elements\")\n",
+    "\t\t\n",
+    "\n",
+    "a = [1, 2, 3, 4, 5]\n",
+    "b = [5, 6, 7, 8, 9]\n",
+    "common_member(a, b)\n",
+    "\n",
+    "a = [1, 2, 3, 4, 5]\n",
+    "b = [6, 7, 8, 9]\n",
+    "common_member(a, b)\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "59a9ba91-7925-471b-b835-be564dc9db6e",
+   "metadata": {},
+   "source": [
+    "19. Find the symmetric difference between two sets.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 209,
+   "id": "328c527e-b4bd-4b26-847c-e455183721de",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Symmetric Difference: {1, 2, 3, 6, 7, 8}\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Define two sets  \n",
+    "set1 = {1, 2, 3, 4, 5}  \n",
+    "set2 = {4, 5, 6, 7, 8}  \n",
+    "  \n",
+    "# Compute symmetric difference using the caret operator  \n",
+    "sym_diff = set1 ^ set2  \n",
+    "  \n",
+    "# Print the symmetric difference  \n",
+    "print(\"Symmetric Difference:\", sym_diff)  \n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a2ddb928-3217-4cdb-b3e0-bed77c589836",
+   "metadata": {},
+   "source": [
+    "20. Update a set with elements from another set. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 210,
+   "id": "d7224620-850e-446b-94a1-641534334f24",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "'set' object is not callable",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[210], line 6\u001b[0m\n\u001b[1;32m      3\u001b[0m list3 \u001b[38;5;241m=\u001b[39m [\u001b[38;5;241m10\u001b[39m, \u001b[38;5;241m11\u001b[39m, \u001b[38;5;241m12\u001b[39m]\n\u001b[1;32m      5\u001b[0m \u001b[38;5;66;03m# Lists converted to sets\u001b[39;00m\n\u001b[0;32m----> 6\u001b[0m set1 \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mset\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43mlist2\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m      7\u001b[0m set2 \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mset\u001b[39m(list1)\n\u001b[1;32m      9\u001b[0m \u001b[38;5;66;03m# Update method\u001b[39;00m\n",
+      "\u001b[0;31mTypeError\u001b[0m: 'set' object is not callable"
+     ]
+    }
+   ],
+   "source": [
+    "list1 = [1, 2, 3]\n",
+    "list2 = [5, 6, 7]\n",
+    "list3 = [10, 11, 12]\n",
+    "\n",
+    "# Lists converted to sets\n",
+    "set1 = set(list2)\n",
+    "set2 = set(list1)\n",
+    "\n",
+    "# Update method\n",
+    "set1.update(set2)\n",
+    "\n",
+    "# Print the updated set\n",
+    "print(set1)\n",
+    "\n",
+    "# List is passed as an parameter which\n",
+    "# gets automatically converted to a set\n",
+    "set1.update(list3)\n",
+    "print(set1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "637f99e7-4d3f-4477-9a9f-f1960a511e7f",
+   "metadata": {},
+   "source": [
+    "21. Create a set of the first 5 prime numbers. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 211,
+   "id": "c51c564b-9480-4d4e-951f-671483e1ad17",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{2, 3, 5, 7, 11}\n"
+     ]
+    }
+   ],
+   "source": [
+    "s={2,3,5,7,11}\n",
+    "print(s)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7b173f8a-3ae9-4591-aa69-87b5721fce2a",
+   "metadata": {},
+   "source": [
+    "22. Check if two sets are identical. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 213,
+   "id": "f87542e9-b5d5-4cba-b16f-2349a70420d6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "name= {1,2,3,4,5}\n",
+    "rollno= {1,2,3,4,5}\n",
+    "print(name==rollno)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b4f9a098-027b-4e9d-b1a2-729f63e6aaea",
+   "metadata": {},
+   "source": [
+    "23. Create a frozen set.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 214,
+   "id": "cc003a26-91c0-4575-824f-f0d943c86542",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The frozen set is: frozenset({'a', 'e', 'o', 'u', 'i'})\n",
+      "The empty frozen set is: frozenset()\n"
+     ]
+    }
+   ],
+   "source": [
+    "vowels = ('a', 'e', 'i', 'o', 'u')\n",
+    "\n",
+    "fSet = frozenset(vowels)\n",
+    "print('The frozen set is:', fSet)\n",
+    "print('The empty frozen set is:', frozenset())\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2166961b-69e1-4ab8-b6cf-4f10d63c4948",
+   "metadata": {},
+   "source": [
+    "24. Check if a set is disjoint with another set. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 215,
+   "id": "96c7da63-7831-4580-9958-d3bc8516503c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "s1 = {1, 2, 3}\n",
+    "s2 = {4, 5, 6}\n",
+    "print(s1.isdisjoint(s2))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "632c2860-fe84-413c-a6ff-f73954d698ce",
+   "metadata": {},
+   "source": [
+    "25. Create a set of squares of numbers from 1 to 5. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 217,
+   "id": "f32f110e-f5c1-4c2f-b65b-0c88f6746b54",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{1, 4, 9, 16, 25}\n"
+     ]
+    }
+   ],
+   "source": [
+    "squares = {x**2 for x in range(1, 6)}\n",
+    "print(squares)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9016607f-93a2-45e7-a286-2a1687578b6b",
+   "metadata": {},
+   "source": [
+    "26. Filter out all even numbers from a set. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 218,
+   "id": "fb73e919-1419-4dd8-a3df-b14ca3b74d5c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[2, 4]\n"
+     ]
+    }
+   ],
+   "source": [
+    "s1 = {1, 2, 3, 4, 5}\n",
+    "\n",
+    "# Output set initialisation\n",
+    "out = []\n",
+    "\n",
+    "for num in s1:\n",
+    "\n",
+    "\t# checking condition\n",
+    "\tif num % 2 == 0:\n",
+    "\t\tout.append(num)\n",
+    "\n",
+    "\n",
+    "# printing output\n",
+    "print(out)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d7415778-ab36-4912-994e-26e1c3dabd1a",
+   "metadata": {},
+   "source": [
+    "27. Multiply all elements in a set by 2. \n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5cf933be-146c-44d0-9c13-1fe492dd2c91",
+   "metadata": {},
+   "source": [
+    "28. Create a set of random numbers\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 219,
+   "id": "4159869a-df59-4900-b15c-2443b30d29c3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Random integers between 0 and 9: \n",
+      "2\n",
+      "4\n",
+      "0\n",
+      "3\n",
+      "1\n",
+      "3\n",
+      "5\n",
+      "2\n",
+      "8\n",
+      "6\n",
+      "8\n"
+     ]
+    }
+   ],
+   "source": [
+    "import random\n",
+    "\n",
+    "\n",
+    "print(\"Random integers between 0 and 9: \")\n",
+    "for i in range(4, 15):\n",
+    "\ty = random.randrange(9)\n",
+    "\tprint(y)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "342e0d8f-6002-4238-b55e-4dbecc6d7d92",
+   "metadata": {},
+   "source": [
+    "29. Check if a set is empty.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 220,
+   "id": "4816f689-31c8-4c9b-8dd4-6b3c6e57c449",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "set is not empty\n"
+     ]
+    }
+   ],
+   "source": [
+    "s={1,2,3,4,5} \n",
+    "if s==0:\n",
+    " print(\"set is empty\")\n",
+    "else:\n",
+    " print(\"set is not empty\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5ce78762-9988-484c-8a9b-fe2a410c02e1",
+   "metadata": {},
+   "source": [
+    "30. Create a nested set \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 221,
+   "id": "ae99929d-8448-49d8-b321-43140b5e8336",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "'set' object is not callable",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[221], line 1\u001b[0m\n\u001b[0;32m----> 1\u001b[0m nestedSets \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mset\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43m[\u001b[49m\u001b[38;5;28;43mfrozenset\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\u001b[43m]\u001b[49m\u001b[43m)\u001b[49m\n",
+      "\u001b[0;31mTypeError\u001b[0m: 'set' object is not callable"
+     ]
+    }
+   ],
+   "source": [
+    "nestedSets = set([frozenset()])\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e61ea8f5-5887-402e-aefb-480bc1660290",
+   "metadata": {},
+   "source": [
+    "31. Remove an element from a set using the discard method\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 222,
+   "id": "054fecbf-d6ca-4b57-ad3f-d3a96a42124a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'cherry', 'apple'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "fruits = {\"apple\", \"banana\", \"cherry\"}\n",
+    "\n",
+    "fruits.discard(\"banana\")\n",
+    "\n",
+    "print(fruits)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cb062fba-77c8-45e5-ae31-a12f3d25d9a2",
+   "metadata": {},
+   "source": [
+    "32. Compare two sets. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 223,
+   "id": "c6f5d376-3b5a-43bb-a5d0-fae822448763",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Set 1:  {56, 90, 43, 12}\n",
+      "Set 2:  {56, 90, 43, 12}\n",
+      "Set1 and Set2 equal?  True\n"
+     ]
+    }
+   ],
+   "source": [
+    "myset1 = {12,90,43,56}\n",
+    "myset2 = {43,56,12,90}\n",
+    "print(\"Set 1: \",myset1)\n",
+    "print(\"Set 2: \",myset2)\n",
+    "\n",
+    "# Check sets equality using == operator\n",
+    "print(\"Set1 and Set2 equal? \",myset1 == myset2)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "afb375ca-8117-4a75-8030-5085130da529",
+   "metadata": {},
+   "source": [
+    "33. Create a set from a string.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 224,
+   "id": "21f8ca5e-168f-4543-a472-0c9a5745bcf1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Contents of string : vishal\n"
+     ]
+    },
+    {
+     "ename": "TypeError",
+     "evalue": "'set' object is not callable",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[224], line 6\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mContents of string : \u001b[39m\u001b[38;5;124m\"\u001b[39m \u001b[38;5;241m+\u001b[39m string)\n\u001b[1;32m      5\u001b[0m \u001b[38;5;66;03m# convert String to Set\u001b[39;00m\n\u001b[0;32m----> 6\u001b[0m string \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mset\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43mstring\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m      7\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;130;01m\\n\u001b[39;00m\u001b[38;5;124mAfter the conversion\u001b[39m\u001b[38;5;124m\"\u001b[39m)\n\u001b[1;32m      8\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mContents of string : \u001b[39m\u001b[38;5;124m\"\u001b[39m, string)\n",
+      "\u001b[0;31mTypeError\u001b[0m: 'set' object is not callable"
+     ]
+    }
+   ],
+   "source": [
+    "# create a string str\n",
+    "string = \"vishal\"\n",
+    "print(\"Contents of string : \" + string)\n",
+    "\n",
+    "# convert String to Set\n",
+    "string = set(string)\n",
+    "print(\"\\nAfter the conversion\")\n",
+    "print(\"Contents of string : \", string)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bd6b7745-9f8b-4e6f-9b3a-e8cec41e289c",
+   "metadata": {},
+   "source": [
+    "34. Convert a set of strings to a set of integers. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 225,
+   "id": "b4ebdb60-ef58-42a7-bd31-b2e1a0fbc392",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Modified set is:  {1, 3, 7, -6, -4}\n"
+     ]
+    }
+   ],
+   "source": [
+    "s1 = {'1', '-4', '3', '-6', '7'}\n",
+    "res = {eval(i) for i in s1}\n",
+    "print(\"Modified set is: \", res)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "da0be775-4791-4bb0-a7bb-d8a14f956fc7",
+   "metadata": {},
+   "source": [
+    "35. Convert a set of integers to a set of strings. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 226,
+   "id": "3f90ffe0-8d02-483e-b677-036140a27c0c",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "unhashable type: 'set'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[226], line 2\u001b[0m\n\u001b[1;32m      1\u001b[0m s1 \u001b[38;5;241m=\u001b[39m {\u001b[38;5;241m1\u001b[39m, \u001b[38;5;241m-\u001b[39m\u001b[38;5;241m4\u001b[39m, \u001b[38;5;241m3\u001b[39m, \u001b[38;5;241m-\u001b[39m\u001b[38;5;241m6\u001b[39m, \u001b[38;5;241m7\u001b[39m}\n\u001b[0;32m----> 2\u001b[0m res \u001b[38;5;241m=\u001b[39m {\u001b[38;5;28meval\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124ms\u001b[39m\u001b[38;5;124m\"\u001b[39m) \u001b[38;5;28;01mfor\u001b[39;00m i \u001b[38;5;129;01min\u001b[39;00m s1}\n\u001b[1;32m      3\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mModified set is: \u001b[39m\u001b[38;5;124m\"\u001b[39m, res)\n",
+      "Cell \u001b[0;32mIn[226], line 2\u001b[0m, in \u001b[0;36m<setcomp>\u001b[0;34m(.0)\u001b[0m\n\u001b[1;32m      1\u001b[0m s1 \u001b[38;5;241m=\u001b[39m {\u001b[38;5;241m1\u001b[39m, \u001b[38;5;241m-\u001b[39m\u001b[38;5;241m4\u001b[39m, \u001b[38;5;241m3\u001b[39m, \u001b[38;5;241m-\u001b[39m\u001b[38;5;241m6\u001b[39m, \u001b[38;5;241m7\u001b[39m}\n\u001b[0;32m----> 2\u001b[0m res \u001b[38;5;241m=\u001b[39m {\u001b[38;5;28meval\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124ms\u001b[39m\u001b[38;5;124m\"\u001b[39m) \u001b[38;5;28;01mfor\u001b[39;00m i \u001b[38;5;129;01min\u001b[39;00m s1}\n\u001b[1;32m      3\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mModified set is: \u001b[39m\u001b[38;5;124m\"\u001b[39m, res)\n",
+      "\u001b[0;31mTypeError\u001b[0m: unhashable type: 'set'"
+     ]
+    }
+   ],
+   "source": [
+    "s1 = {1, -4, 3, -6, 7}\n",
+    "res = {eval(\"s\") for i in s1}\n",
+    "print(\"Modified set is: \", res)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "50b77379-0079-40f0-8adb-7d901a340f27",
+   "metadata": {},
+   "source": [
+    "36. Create a set from a tuple. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 231,
+   "id": "7fab7b81-f543-497a-a4ac-0bbd90330be2",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "'str' object is not callable",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[231], line 8\u001b[0m\n\u001b[1;32m      5\u001b[0m test_set \u001b[38;5;241m=\u001b[39m {\u001b[38;5;241m*\u001b[39mt1,}\n\u001b[1;32m      7\u001b[0m \u001b[38;5;66;03m#printing the converted set\u001b[39;00m\n\u001b[0;32m----> 8\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mThe converted set : \u001b[39m\u001b[38;5;124m\"\u001b[39m \u001b[38;5;241m+\u001b[39m \u001b[38;5;28;43mstr\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43mt1\u001b[49m\u001b[43m)\u001b[49m)\n",
+      "\u001b[0;31mTypeError\u001b[0m: 'str' object is not callable"
+     ]
+    }
+   ],
+   "source": [
+    "#initializing a tuple\n",
+    "t1 = (6, 3, 7, 1, 2, 4)\n",
+    "\n",
+    "#converting the tuple into a set\n",
+    "test_set = {*t1,}\n",
+    "\n",
+    "#printing the converted set\n",
+    "print(\"The converted set : \" + str(test_set))\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "57cbe591-d270-4ea5-945a-3d78c7bd4666",
+   "metadata": {},
+   "source": [
+    "37.create a tuple from a set.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 232,
+   "id": "d825ff10-308a-420b-a553-f8bedc172307",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "'str' object is not callable",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[232], line 8\u001b[0m\n\u001b[1;32m      5\u001b[0m test_tuple \u001b[38;5;241m=\u001b[39m (\u001b[38;5;241m*\u001b[39mt1,)\n\u001b[1;32m      7\u001b[0m \u001b[38;5;66;03m#printing the converted tuple\u001b[39;00m\n\u001b[0;32m----> 8\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mThe converted tuple : \u001b[39m\u001b[38;5;124m\"\u001b[39m \u001b[38;5;241m+\u001b[39m \u001b[38;5;28;43mstr\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43mtest_tuple\u001b[49m\u001b[43m)\u001b[49m)\n",
+      "\u001b[0;31mTypeError\u001b[0m: 'str' object is not callable"
+     ]
+    }
+   ],
+   "source": [
+    "#initializing a set\n",
+    "s1 = {6, 3, 7, 1, 2, 4}\n",
+    "\n",
+    "#converting the set into a tuple\n",
+    "test_tuple = (*t1,)\n",
+    "\n",
+    "#printing the converted tuple\n",
+    "print(\"The converted tuple : \" + str(test_tuple))\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d67c1cba-dbb6-417c-a7e8-d47c88d3be49",
+   "metadata": {},
+   "source": [
+    "38. Find the maximum value in a set. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 233,
+   "id": "8b9a5093-dacf-48f5-bffc-8e23de2e0aeb",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Maximum: 18\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_set = {5, 2, 8, 1, 9, 2, 18}\n",
+    "\n",
+    "# Convert set to a list\n",
+    "my_list = list(my_set)\n",
+    "\n",
+    "# Find the maximum  values\n",
+    "maximum = max(my_list)\n",
+    "\n",
+    "# Display maximum  value\n",
+    "print(\"Maximum:\", maximum)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e50971c0-190d-41f6-b0ce-760706d2a16e",
+   "metadata": {},
+   "source": [
+    "39. Find the minimum value in a set. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 234,
+   "id": "5713935d-abeb-4fe5-b942-b3c0ba9e038a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Minimum: 1\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_set = {5, 2, 8, 1, 9, 2, 18}\n",
+    "\n",
+    "# Convert set to a list\n",
+    "my_list = list(my_set)\n",
+    "\n",
+    "# Find the minimum  values\n",
+    "minimum = min(my_list)\n",
+    "\n",
+    "# Display minimum  value\n",
+    "print(\"Minimum:\", minimum)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "85f9c9dd-db9e-4b7d-a9e4-670e4e957615",
+   "metadata": {},
+   "source": [
+    "40. Create a set from user input. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 236,
+   "id": "9ebe6452-1417-4eca-9d7b-f0f1957083f0",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "enter set numbers {2,4,6,8,6}\n"
+     ]
+    },
+    {
+     "ename": "TypeError",
+     "evalue": "'set' object is not callable",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[236], line 7\u001b[0m\n\u001b[1;32m      2\u001b[0m input_a \u001b[38;5;241m=\u001b[39m \u001b[38;5;28minput\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124menter set numbers\u001b[39m\u001b[38;5;124m\"\u001b[39m)\n\u001b[1;32m      6\u001b[0m \u001b[38;5;66;03m# type cast into set\u001b[39;00m\n\u001b[0;32m----> 7\u001b[0m input_a \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mset\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43minput_a\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m      9\u001b[0m \u001b[38;5;66;03m# print data type\u001b[39;00m\n\u001b[1;32m     10\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;28mtype\u001b[39m(input_a))\n",
+      "\u001b[0;31mTypeError\u001b[0m: 'set' object is not callable"
+     ]
+    }
+   ],
+   "source": [
+    "# take input from user\n",
+    "input_a = input(\"enter set numbers\")\n",
+    "\n",
+    "\n",
+    "\n",
+    "# type cast into set\n",
+    "input_a = set(input_a)\n",
+    "\n",
+    "# print data type\n",
+    "print(type(input_a))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3c487f3c-f2a7-4378-8156-0a085b404826",
+   "metadata": {},
+   "source": [
+    "41. Check if the intersection of two sets is empty. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 237,
+   "id": "1babf1d0-118d-4734-8ec5-54d12f845652",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "'set' object is not callable",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[237], line 3\u001b[0m\n\u001b[1;32m      1\u001b[0m l\u001b[38;5;241m=\u001b[39m{\u001b[38;5;241m1\u001b[39m,\u001b[38;5;241m2\u001b[39m,\u001b[38;5;241m34\u001b[39m,\u001b[38;5;241m5\u001b[39m,\u001b[38;5;241m6\u001b[39m,\u001b[38;5;241m7\u001b[39m,\u001b[38;5;241m8\u001b[39m}\n\u001b[1;32m      2\u001b[0m m\u001b[38;5;241m=\u001b[39m{\u001b[38;5;241m0\u001b[39m,\u001b[38;5;241m6\u001b[39m,\u001b[38;5;241m4\u001b[39m,\u001b[38;5;241m9\u001b[39m,\u001b[38;5;241m8\u001b[39m}\n\u001b[0;32m----> 3\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28;43mset\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43ml\u001b[49m\u001b[43m)\u001b[49m \u001b[38;5;241m&\u001b[39m \u001b[38;5;28mset\u001b[39m(m):\n\u001b[1;32m      4\u001b[0m   \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124m there is an intersection \u001b[39m\u001b[38;5;124m\"\u001b[39m)\n\u001b[1;32m      5\u001b[0m \u001b[38;5;28;01melse\u001b[39;00m:\n",
+      "\u001b[0;31mTypeError\u001b[0m: 'set' object is not callable"
+     ]
+    }
+   ],
+   "source": [
+    "l={1,2,34,5,6,7,8}\n",
+    "m={0,6,4,9,8}\n",
+    "if set(l) & set(m):\n",
+    "  print(\" there is an intersection \")\n",
+    "else:\n",
+    "   print(\"no intersection\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "26a6e76c-dbc9-43e3-98f6-60f4cbd0208f",
+   "metadata": {},
+   "source": [
+    "42. Create a set of the first 5 Fibonacci numbers. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 238,
+   "id": "721b9a80-be98-4b54-8a1c-73ca931eb489",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "How many terms?  5\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Fibonacci sequence:\n",
+      "0\n",
+      "1\n",
+      "1\n",
+      "2\n",
+      "3\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Program to display the Fibonacci sequence up to n-th term\n",
+    "\n",
+    "nterms = int(input(\"How many terms? \"))\n",
+    "\n",
+    "# first two terms\n",
+    "n1, n2 = 0, 1\n",
+    "count = 0\n",
+    "\n",
+    "# check if the number of terms is valid\n",
+    "if nterms <= 0:\n",
+    "   print(\"Please enter a positive integer\")\n",
+    "# if there is only one term, return n1\n",
+    "elif nterms == 1:\n",
+    "   print(\"Fibonacci sequence upto\",nterms,\":\")\n",
+    "   print(n1)\n",
+    "# generate fibonacci sequence\n",
+    "else:\n",
+    "   print(\"Fibonacci sequence:\")\n",
+    "   while count < nterms:\n",
+    "       print(n1)\n",
+    "       nth = n1 + n2\n",
+    "       # update values\n",
+    "       n1 = n2\n",
+    "       n2 = nth\n",
+    "       count += 1\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1ea51981-7bf5-4e0c-b41e-320a749b069a",
+   "metadata": {},
+   "source": [
+    "43. Remove duplicates from a list using sets.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 241,
+   "id": "8683c740-f1df-47cf-b229-153939af878f",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "'str' object is not callable",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[241], line 4\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[38;5;66;03m# initializing set\u001b[39;00m\n\u001b[1;32m      2\u001b[0m s1 \u001b[38;5;241m=\u001b[39m {\u001b[38;5;241m1\u001b[39m, \u001b[38;5;241m5\u001b[39m, \u001b[38;5;241m3\u001b[39m, \u001b[38;5;241m6\u001b[39m, \u001b[38;5;241m3\u001b[39m, \u001b[38;5;241m5\u001b[39m, \u001b[38;5;241m6\u001b[39m, \u001b[38;5;241m1\u001b[39m}\n\u001b[1;32m      3\u001b[0m \u001b[38;5;28mprint\u001b[39m (\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mThe original set is : \u001b[39m\u001b[38;5;124m\"\u001b[39m\n\u001b[0;32m----> 4\u001b[0m \t\t\u001b[38;5;241m+\u001b[39m \u001b[38;5;28;43mstr\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43ms1\u001b[49m\u001b[43m)\u001b[49m)\n\u001b[1;32m      6\u001b[0m s1 \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mset\u001b[39m(\u001b[38;5;28mset\u001b[39m(s1))\n\u001b[1;32m      8\u001b[0m \u001b[38;5;66;03m# printing set after removal\u001b[39;00m\n\u001b[1;32m      9\u001b[0m \u001b[38;5;66;03m# distorted ordering\u001b[39;00m\n",
+      "\u001b[0;31mTypeError\u001b[0m: 'str' object is not callable"
+     ]
+    }
+   ],
+   "source": [
+    "# initializing set\n",
+    "s1 = {1, 5, 3, 6, 3, 5, 6, 1}\n",
+    "print (\"The original set is : \"\n",
+    "\t\t+ str(s1))\n",
+    "\n",
+    "s1 = set(set(s1))\n",
+    "\n",
+    "# printing set after removal\n",
+    "# distorted ordering\n",
+    "print (\"The set after removing duplicates : \"\n",
+    "\t\t+ str(s1))\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c663b0f9-d410-43ca-83f7-56d78891ad31",
+   "metadata": {},
+   "source": [
+    "44. Check if two sets have the same elements, regardless of their count\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 242,
+   "id": "652cd0a9-d895-4a49-a218-ad560852bb4b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "name= {1,2,3,4,5}\n",
+    "rollno= {1,2,3,4,5}\n",
+    "print(name==rollno)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fcc96b92-b1f5-487d-9fb8-859517e81acc",
+   "metadata": {},
+   "source": [
+    "45. Create a set of the first `n` powers of 2. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 243,
+   "id": "8fadce8e-75ed-40f4-9c0f-3e938ad6260c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter Number of Term: "
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      " 10\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "2 raised to the power  0  is  1\n",
+      "2 raised to the power  1  is  2\n",
+      "2 raised to the power  2  is  4\n",
+      "2 raised to the power  3  is  8\n",
+      "2 raised to the power  4  is  16\n",
+      "2 raised to the power  5  is  32\n",
+      "2 raised to the power  6  is  64\n",
+      "2 raised to the power  7  is  128\n",
+      "2 raised to the power  8  is  256\n",
+      "2 raised to the power  9  is  512\n"
+     ]
+    }
+   ],
+   "source": [
+    "def MyFun(x):\n",
+    "    return 2 ** x\n",
+    "\n",
+    "print(\"Enter Number of Term: \", end=\"\")\n",
+    "tot = int(input())\n",
+    "\n",
+    "print()\n",
+    "for i in range(tot):\n",
+    "    print(\"2 raised to the power \", i, \" is \", MyFun(i))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7643382b-9350-43bc-84a2-9986c38ea0eb",
+   "metadata": {},
+   "source": [
+    "46. Find the common elements between a set and a list\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 245,
+   "id": "e6119ffb-3982-404c-a869-080aac5a4326",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{5}"
+      ]
+     },
+     "execution_count": 245,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s1={1,2,3,4,5}\n",
+    "l1=[9,5,6,7,8]\n",
+    "\n",
+    "s1.intersection(l1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "17e3f677-1357-4551-a0db-e8ea9be5ec62",
+   "metadata": {},
+   "source": [
+    "47. Create a set of the first `n` triangular numbers.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 246,
+   "id": "53702c46-ad81-49be-b5a2-78bffb66dc95",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1 3 6 10 15 "
+     ]
+    }
+   ],
+   "source": [
+    "def triangular_series( n ):\n",
+    "\tj = 1\n",
+    "\tk = 1\n",
+    "\t\n",
+    "\t# For each iteration increase j\n",
+    "\t# by 1 and add it into k\n",
+    "\tfor i in range(1, n + 1):\n",
+    "\t\tprint(k, end = ' ')\n",
+    "\t\tj = j + 1 # Increasing j by 1\n",
+    "\t\t\n",
+    "\t\t# Add value of j into k and update k\n",
+    "\t\tk = k + j\n",
+    "\t\t\n",
+    "# Driven Code\n",
+    "n = 5\n",
+    "triangular_series(n)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4569c364-98ec-48d9-81ca-f3fd9b00cfba",
+   "metadata": {},
+   "source": [
+    "48. Check if a set contains another set as a subset. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 247,
+   "id": "9368fa09-805b-4081-b84f-0e8fca6567e8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "setA:  {1, 2, 3, 4, 5}\n",
+      "setB:  {1, 2, 3}\n",
+      "Is setB a subset of setA?:  True\n",
+      "Is setA a subset of setB?:  False\n"
+     ]
+    }
+   ],
+   "source": [
+    "setA = {1, 2, 3, 4, 5}\n",
+    "setB = {1, 2, 3}\n",
+    "\n",
+    "print(\"setA: \", setA)\n",
+    "print(\"setB: \", setB)\n",
+    "\n",
+    "\n",
+    "print(\"Is setB a subset of setA?: \", setB.issubset(setA))\n",
+    "print(\"Is setA a subset of setB?: \", setA.issubset(setB))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f9e5f0f0-7dda-4593-b463-36e394c73b4d",
+   "metadata": {},
+   "source": [
+    "49. Create a set of alternating 1s and 0s of length `n`. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 250,
+   "id": "f952065d-5e2e-467c-8411-f6d161dfa8f8",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "can only concatenate str (not \"set\") to str",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[250], line 15\u001b[0m\n\u001b[1;32m     11\u001b[0m s1 \u001b[38;5;241m=\u001b[39m {\u001b[38;5;241m1\u001b[39m \u001b[38;5;28;01mif\u001b[39;00m i \u001b[38;5;241m%\u001b[39m (count_1 \u001b[38;5;241m+\u001b[39m count_0) \u001b[38;5;241m<\u001b[39m count_1\n\u001b[1;32m     12\u001b[0m             \u001b[38;5;28;01melse\u001b[39;00m \u001b[38;5;241m0\u001b[39m \u001b[38;5;28;01mfor\u001b[39;00m i \u001b[38;5;129;01min\u001b[39;00m \u001b[38;5;28mrange\u001b[39m(size)}\n\u001b[1;32m     14\u001b[0m \u001b[38;5;66;03m# printing set after change\u001b[39;00m\n\u001b[0;32m---> 15\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124;43m\"\u001b[39;49m\u001b[38;5;124;43mThe set after initializing : \u001b[39;49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[43m \u001b[49m\u001b[38;5;241;43m+\u001b[39;49m\u001b[43m \u001b[49m\u001b[43m(\u001b[49m\u001b[43ms1\u001b[49m\u001b[43m)\u001b[49m)\n",
+      "\u001b[0;31mTypeError\u001b[0m: can only concatenate str (not \"set\") to str"
+     ]
+    }
+   ],
+   "source": [
+    "# count of 1\n",
+    "count_1 = 4\n",
+    "\n",
+    "# count of 0\n",
+    "count_0 = 3\n",
+    "\n",
+    "# total length of set\n",
+    "size = 14\n",
+    "\n",
+    "\n",
+    "s1 = {1 if i % (count_1 + count_0) < count_1\n",
+    "            else 0 for i in range(size)}\n",
+    "\n",
+    "# printing set after change\n",
+    "print(\"The set after initializing : \" + str(s1))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3574c4b6-c449-48eb-9305-b2168c2ce35a",
+   "metadata": {},
+   "source": [
+    "50. Merge multiple sets into one. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 251,
+   "id": "08416be8-140d-4c62-91df-61220981e304",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}\n"
+     ]
+    }
+   ],
+   "source": [
+    "m1={1,2,3,4}\n",
+    "m2={5,6,7,8}\n",
+    "m3={9,10}\n",
+    "\n",
+    "m4 = m1.union(m2,m3)\n",
+    "\n",
+    "print(m4)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "db81b57f-7eee-488f-8c73-ef1847c860c8",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
